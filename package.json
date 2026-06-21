@@ -1,0 +1,43 @@
+{
+	"name": "text-typing",
+	"version": "1.0.0",
+	"description": "Make your text in amazing typing effect.",
+	"author": "Wasek Bellah",
+	"license": "ISC",
+	"main": "build/index.js",
+	"scripts": {
+		"packages-update": "wp-scripts packages-update",
+		"lint": "eslint src",
+		"lint:css": "wp-scripts lint-style",
+		"lint:js": "wp-scripts lint-js",
+		"format": "wp-scripts format",
+		"start": "wp-scripts start --webpack-copy-php",
+		"build": "wp-scripts build --webpack-copy-php",
+		"i18n-pot": "wp i18n make-pot . languages/text-typing.pot --exclude=\"src\" && cp ./languages/text-typing.pot ./languages/text-typing-en_US.po",
+		"i18n-json": "wp i18n make-json languages/ --no-purge",
+		"i18n-mo": "wp i18n make-mo languages/",
+		"i18n": "npm run i18n-pot && npm run i18n-json && npm run i18n-mo",
+		"plugin-zip": "wp-scripts plugin-zip",
+		"zip": "zip -r text-typing.zip admin build includes languages public vendor index.php readme.txt",
+		"bundle": "gulp clean && npm run lint && npm run build && npm run i18n && npm run zip"
+	},
+	"dependencies": {
+		"gsap": "^3.13.0",
+		"immer": "^10.1.3",
+		"react-hot-toast": "^2.6.0",
+		"react-router-dom": "^7.9.1"
+	},
+	"devDependencies": {
+		"@wordpress/block-editor": "^14.21.0",
+		"@wordpress/blocks": "^13.5.0",
+		"@wordpress/components": "^28.5.0",
+		"@wordpress/compose": "^7.5.0",
+		"@wordpress/data": "^10.5.0",
+		"@wordpress/i18n": "^5.5.0",
+		"@wordpress/scripts": "^27.9.0",
+		"del": "^8.0.1",
+		"eslint-webpack-plugin": "^4.2.0",
+		"gulp": "^5.0.0",
+		"gulp-freemius-deploy": "^1.0.11"
+	}
+}

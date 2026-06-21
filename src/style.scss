@@ -1,0 +1,37 @@
+.wp-block-ttb-text-typing {
+  * {
+    box-sizing: border-box;
+  }
+
+  .ttbTextTyping {
+    background: inherit;
+    box-sizing: border-box;
+    .typed-fade-out {
+      opacity: 0;
+      transition: opacity 0.25s;
+      animation: 0;
+    }
+
+    .typed-cursor {
+      opacity: 1;
+
+      &.typed-cursor--blink {
+        animation: typingCursorBlink 0.7s infinite;
+      }
+    }
+
+    @keyframes typingCursorBlink {
+      0% {
+        opacity: 1;
+      }
+
+      50% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+  }
+}
