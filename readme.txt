@@ -109,6 +109,12 @@ Other plugins by our team:
 [**Advanced Post Block**](https://bplugins.com/products/advanced-post-block/) – Show posts and custom posts in different layouts.
 
 
+== Source Code ==
+
+The non-minified source code for this plugin is available on our public repository:
+[GitHub Repository](https://github.com/bPlugins/text-typing-free)
+
+
 == Third-Party Libraries ==
 
 This plugin uses the following third-party libraries:
@@ -139,13 +145,21 @@ As the external service functionality is handled by bpl-tools as a third-party l
 * **Terms of Service:** [https://wordpress.org/about/tos/](https://wordpress.org/about/tos/)
 * **Privacy Policy:** [https://wordpress.org/about/privacy/](https://wordpress.org/about/privacy/)
 
+= Freemius API =
+
+* **Service URL:** [https://api.freemius.com](https://api.freemius.com)
+* **Purpose:** Handles license activation, premium feature verification, update checks, and opt-in telemetry for both free and pro versions.
+* **Data Sent:** Site URL, admin email, license keys, and version numbers.
+* **Terms of Service:** [https://freemius.com/terms/](https://freemius.com/terms/)
+* **Privacy Policy:** [https://freemius.com/privacy/](https://freemius.com/privacy/)
+
 
 == Build Process ==
 
 This plugin uses a build process to generate the production assets (JS/CSS) located in the `build/` directory. The human-readable source code is available in the `src/` and `dashboard/` directories (shipped inside the plugin).
 
 To build the plugin from source:
-1. Clone the repository: https://github.com/bPlugins/text-typing
+1. Clone the repository: https://github.com/bPlugins/text-typing-free
 2. Install dependencies: `npm install`
 3. Run the build command: `npm run build`
 
