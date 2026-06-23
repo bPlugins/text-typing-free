@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
           showCopiedMessage();
           return;
         } catch (err) {
-          console.warn('Clipboard API failed, using fallback.', err);
+          // console.warn('Clipboard API failed, using fallback.', err);
           fallbackCopy(shortcode);
         }
       } else {
@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
       document.execCommand('copy');
       showCopiedMessage();
     } catch (err) {
-      console.error('Fallback copy failed:', err);
+      // console.error('Fallback copy failed:', err);
       alert('Copy failed. Please copy manually.');
     }
     document.body.removeChild(temp);

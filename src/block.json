@@ -1,5 +1,5 @@
 {
-  "apiVersion": "1",
+  "apiVersion": 3,
   "name": "ttb/text-typing",
   "title": "Text Typing",
   "description": "Make your text in amazing typing effect.",

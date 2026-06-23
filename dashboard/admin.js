@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
       info = JSON.parse(adminEl?.dataset?.info);
     }
   } catch {
-    console.warn("Not Info")
+    // console.warn("Not Info")
   }
 
   React.createRoot(adminEl).render(<App {...dashboardInfo(info)} />)

@@ -9,7 +9,7 @@ import ThemeSwitch from '../Common/ThemeSwitch';
 import Settings from './Settings/Settings';
 
 import { prefix } from '../../utils/data';
-import ClipBoard from './ClipBoard';
+import CopyShortcode from './CopyShortcode';
 
 const Edit = props => {
 	const { attributes, setAttributes, clientId, isSelected, currentPostId, CTPType } = props;
@@ -29,7 +29,7 @@ const Edit = props => {
 		<div {...useBlockProps()} id={id}>
 			<Style attributes={attributes} id={id} />
 
-			{isBlockEditor && (CTPType === "text-typing") && <ClipBoard shortcode={shortcode} />}
+			{isBlockEditor && (CTPType === "text-typing") && <CopyShortcode shortcode={shortcode} />}
 
 			<ThemeSwitch attributes={attributes} />
 		</div>

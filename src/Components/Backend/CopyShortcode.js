@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const ClipBoard = ({ shortcode }) => {
+const CopyShortcode = ({ shortcode }) => {
   const [hasCopied, setHasCopied] = useState(false);
 
   const handleCopy = async () => {
@@ -20,7 +20,7 @@ const ClipBoard = ({ shortcode }) => {
       setHasCopied(true);
       setTimeout(() => setHasCopied(false), 2000);
     } catch (err) {
-      console.error("Failed to copy:", err);
+      // console.error("Failed to copy:", err);
     }
   };
 
@@ -38,4 +38,4 @@ const ClipBoard = ({ shortcode }) => {
   );
 };
 
-export default ClipBoard;
+export default CopyShortcode;

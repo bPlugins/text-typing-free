@@ -39,7 +39,7 @@ The free version includes everything needed to add animated typing text in the G
 
 == Pro Features Include ==
 
-- **Premium Themes**: Terminal, Star Flower, Neon Grid, Aurora Glow, and Cyber Wave.
+- **Premium Themes**: Terminal, Star Flower, Neon Grid, Aurora Glow, Cyber Wave, Code Editor, Gradient Flow, Glitch Pulse, Vintage Typewriter, Block Stack, Liquid Morph, Ink Signature, Bounce Pop, LED Marquee, Holo Foil, Inferno Blaze, Matrix Rain, Comic Pop, Golden Luxe, Watercolor Ink, Frosted Glass, and Decrypt Cipher.
 - **Custom Colors & Gradients**: Text, cursor, and background with smooth gradient support.
 - **Text Shadow Effects**: Add depth, glow, or emphasis to your text.
 - **Cursor Styling**: Change cursor style, size, and color.
@@ -194,7 +194,7 @@ Build Tools Used: Webpack, Babel, PostCSS.
 Yes. The free version is fully functional and includes the typing block, prefix/suffix text, speed and delay controls, loop, cursor, typography, colors, and layout styling. A separate Pro version adds premium themes and effects.
 
 = What extra features are included in Pro? =
-Pro adds ready-made themes (Terminal, Star Flower, Neon Grid, Aurora Glow, Cyber Wave), gradients, text shadows, cursor styling, icons, and additional responsive controls.
+Pro adds ready-made themes (Terminal, Star Flower, Neon Grid, Aurora Glow, Cyber Wave, Code Editor, Gradient Flow, Glitch Pulse, Vintage Typewriter, Block Stack, Liquid Morph, Ink Signature, Bounce Pop, LED Marquee, Holo Foil, Inferno Blaze, Matrix Rain, Comic Pop, Golden Luxe, Watercolor Ink, Frosted Glass, and Decrypt Cipher), gradients, text shadows, cursor styling, icons, and additional responsive controls.
 
 = Does it work with any WordPress theme? =
 Yes. It works with any standard WordPress theme.
@@ -216,13 +216,35 @@ Please report security bugs found in the source code of the Typing Text plugin t
 
 1. Gutenberg Setting
 2. Default layout
+3. Terminal theme (Pro)
+4. Star Flower theme (Pro)
+5. Neon Grid theme (Pro)
+6. Aurora Glow theme (Pro)
+7. Cyber Wave theme (Pro)
+8. Code Editor theme (Pro)
+9. Gradient Flow theme (Pro)
+10. Glitch Pulse theme (Pro)
+11. Vintage Typewriter theme (Pro)
+12. Block Stack theme (Pro)
+13. Liquid Morph theme (Pro)
+14. Ink Signature theme (Pro)
+15. Bounce Pop theme (Pro)
+16. LED Marquee theme (Pro)
+17. Holo Foil theme (Pro)
+18. Inferno Blaze theme (Pro)
+19. Matrix Rain theme (Pro)
+20. Comic Pop theme (Pro)
+21. Golden Luxe theme (Pro)
+22. Watercolor Ink theme (Pro)
+23. Frosted Glass theme (Pro)
+24. Decrypt Cipher theme (Pro)
 
 
 == Changelog ==
 
-= 2.1.0 - 20 June 2026 =
+= 2.1.0 - 23 June 2026 =
 - **Update**: Rebuilt as a fully free edition — removed all locked/premium features so the plugin is completely free and functional, per WordPress.org directory guidelines.
-- **Update**: Premium themes (Terminal, Star Flower, Neon Grid, Aurora Glow, Cyber Wave) and advanced effects are now available only in the separate Text Typing Pro plugin.
+- **Update**: Premium themes and advanced effects are now available only in the separate Text Typing Pro plugin, which now ships an expanded collection of 22 themes — Terminal, Star Flower, Neon Grid, Aurora Glow, Cyber Wave, Code Editor, Gradient Flow, Glitch Pulse, Vintage Typewriter, Block Stack, Liquid Morph, Ink Signature, Bounce Pop, LED Marquee, Holo Foil, Inferno Blaze, Matrix Rain, Comic Pop, Golden Luxe, Watercolor Ink, Frosted Glass, and Decrypt Cipher — with per-theme effect controls.
 - **Security**: Hardened shortcode output escaping and input sanitization.
 - **Update**: Documented the build process and bundled third-party libraries in the readme, and removed an unused third-party script.
 
