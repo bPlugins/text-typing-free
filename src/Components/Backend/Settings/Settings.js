@@ -2,7 +2,7 @@ import { AlignmentToolbar, BlockControls, InspectorControls } from '@wordpress/b
 import { Button, Dashicon, __experimentalNumberControl as NumberControl, PanelBody, PanelRow, TabPanel, TextControl, ToggleControl, Tooltip, __experimentalUnitControl as UnitControl } from '@wordpress/components';
 import { __ } from '@wordpress/i18n';
 
-import { Background, BBlocksAds, ColorControl, Device, HelpPanel, Label, Typography } from '../../../../../bpl-tools/Components';
+import { Background, ColorControl, Device, HelpPanel, Label, Typography } from '../../../../../bpl-tools/Components';
 import { BorderControl, SpaceControl } from '../../../../../bpl-tools/Components/Deprecated';
 import { AdvertiseCard } from '../../../../../bpl-tools/ProControls';
 import { tabController, updateData } from '../../../../../bpl-tools/utils/functions';
@@ -19,9 +19,6 @@ const Settings = ({ attributes, setAttributes, device }) => {
 
 	return <>
 		<InspectorControls>
-			<div className='bPlInspectorInfo'>
-				<BBlocksAds />
-			</div>
 
 			<TabPanel className='bPlTabPanel' activeClass='activeTab' tabs={generalStyleTabs} onSelect={tabController}>{tab => <>
 				{'general' == tab.name && <>
