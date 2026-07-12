@@ -3,29 +3,23 @@ const slug = "text-typing";
 export const dashboardInfo = (info) => {
   const {
     version,
-    isPremium,
-    hasPro,
-    licenseActiveNonce,
     adminUrl,
     uninstallNonce,
     deleteDataOnUninstall,
   } = info;
 
-  const proSuffix = isPremium ? " Pro" : "";
-
   return {
-    name: `Typing Text${proSuffix}`,
-    displayName: `Typing Text${proSuffix} - Add Animated Typing Effects to Headings or Text`,
+    name: "Typing Text",
+    displayName: "Typing Text - Add Animated Typing Effects to Headings or Text",
     description:
       "Typing Text Block is a powerful and easy-to-use WordPress block that lets you create realistic typing text animations without any coding. Perfect for hero sections, banners, headlines, and call-to-action areas, it helps you highlight key messages in an engaging and modern way.",
     slug,
     version,
-    isPremium,
-    hasPro,
     adminUrl,
     uninstallNonce,
     deleteDataOnUninstall,
     displayOurPlugins: true,
+    showUpgrade: false,
     media: {
       logo: `https://ps.w.org/${slug}/assets/icon-128x128.png`,
       banner: `https://ps.w.org/${slug}/assets/banner-772x250.png`,
@@ -38,16 +32,7 @@ export const dashboardInfo = (info) => {
       org: `https://wordpress.org/plugins/${slug}/`,
       landing: `https://bplugins.com/products/${slug}/`,
       docs: `https://bplugins.com/docs/typing-text-block/`,
-      pricing: `https://bplugins.com/products/${slug}/pricing`,
     },
-    freemius: {
-      product_id: 20170,
-      plan_id: 33453,
-      public_key: "pk_b0a805a4574f7a1db93e8859282de",
-    },
-
-    licenseActiveNonce,
-
     startButton: {
       label: "Start Now",
       url: "wp-admin/post-new.php?post_type=text-typing",
@@ -201,8 +186,8 @@ export const welcomeInfo = (adminUrl = "") => ({
       type: "update",
       list: [
         "<strong>Update:</strong> Redesigned dashboard and renamed the admin menu item.",
-        "<strong>Update:</strong> Rebuilt as a fully free edition — removed all locked/premium features so the plugin is completely free and functional, per WordPress.org directory guidelines.",
-        "<strong>Update:</strong> Premium themes and advanced effects are now available only in the separate Text Typing Pro plugin, which now ships an expanded collection of 22 themes — Terminal, Star Flower, Neon Grid, Aurora Glow, Cyber Wave, Code Editor, Gradient Flow, Glitch Pulse, Vintage Typewriter, Block Stack, Liquid Morph, Ink Signature, Bounce Pop, LED Marquee, Holo Foil, Inferno Blaze, Matrix Rain, Comic Pop, Golden Luxe, Watercolor Ink, Frosted Glass, and Decrypt Cipher — with per-theme effect controls.",
+        "<strong>Update:</strong> Rebuilt as a fully free edition — every feature is included and unlocked, following WordPress.org directory guidelines.",
+        "<strong>New:</strong> Added a built-in theme switcher with 6 ready-made themes — Default, Terminal, Star Flower, Neon Grid, Aurora Glow, and Cyber Wave — each with its own controls.",
         "<strong>Security:</strong> Hardened shortcode output escaping and input sanitization.",
         "<strong>Update:</strong> Documented the build process and bundled third-party libraries in the readme, and removed an unused third-party script.",
       ],
@@ -212,8 +197,7 @@ export const welcomeInfo = (adminUrl = "") => ({
       type: "update",
       list: [
         "<strong>Add:</strong> Instantly switch between predefined themes to change the typing text appearance.",
-        "<strong>Improve:</strong> Some Pro features now preview on the frontend without a license.",
-        "<strong>Improve:</strong> Premium-quality Pro upgrade modal.",
+        "<strong>Improve:</strong> Refined frontend preview rendering.",
       ],
     },
     {
@@ -232,18 +216,6 @@ export const welcomeInfo = (adminUrl = "") => ({
   ],
   changelogsLimit: 5,
   changelogsReadMoreLabel: "View Full Changelog",
-
-  // Pro upsell bullets shown in ProAds (free users only).
-  proFeatures: [
-    "Choose from a variety of pre-designed themes for unique text animations",
-    "Custom Colors & Gradients: Text, cursor, background, with smooth gradient support",
-    "Access premium animation styles for stunning visuals",
-    "Loop & Delay Options: Repeat or pause typing with precise timing",
-    "Cursor Styling: Change style, size, and color for a personalized look",
-    "Prefix & Suffix Text: Add extra words before or after typing text",
-    "Optional Icons for Each Text: Users can add icons before/after text or skip entirely",
-    "Premium Animations: Exclusive smooth effects available only in Pro",
-  ],
 });
 
 // Shared icon used by the additional theme demo entries below.
@@ -548,17 +520,4 @@ export const demoInfo = {
       type: "iframe",
     },
   ],
-};
-
-export const pricingInfo = {
-  logo: `https://ps.w.org/${slug}/assets/icon-128x128.png`, // Optional
-  pluginId: 17879,
-  planId: 29699,
-  licenses: [1, 3, null],
-  button: {
-    label: "Buy Now ➜",
-  },
-  featured: {
-    selected: 3, // choose from licenses item
-  },
 };

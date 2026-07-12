@@ -1,0 +1,59 @@
+.ttbTextTyping.starFlower {
+  position: relative;
+  display: flex;
+  box-sizing: border-box;
+
+  .textAnimate {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    color: inherit;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 100%;
+    word-break: break-word;
+    text-align: center;
+  }
+
+  .starFlower-inline {
+    display: inline-flex;
+    align-items: center;
+  }
+
+
+  .prefixText,
+  .textAnimate,
+  .suffixText {
+    display: inline-block;
+    white-space: pre;
+  }
+
+  .textAnimate span {
+    font-size: inherit;
+  }
+
+  .offscreen-text {
+    position: absolute;
+    visibility: hidden;
+  }
+
+  .helloSvg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+  }
+
+  @media (max-width: 768px) {
+    .textAnimate {
+      font-size: 2rem;
+    }
+
+    .inputAnimate {
+      width: 40%;
+      font-size: 1.2rem;
+    }
+  }
+}

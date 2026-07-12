@@ -1,7 +1,7 @@
 === Typing Text – Animated Typing Effect Block for Headings & Text ===
 Contributors: bplugins, noornabi2, abuhayat, charlescormier
 Donate link: https://www.buymeacoffee.com/abuhayat
-Tags: block, typing text, typing effect, text animation, typing animation
+Tags: block, typing text, typing effect, text animation, typewriter effect
 Requires at least: 6.5
 Tested up to: 7.0
 Stable tag: 2.1.0

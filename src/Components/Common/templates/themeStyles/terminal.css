@@ -1,0 +1,38 @@
+.terminal {
+  color: #00ff9c;
+  height: auto;
+  margin: auto;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  box-sizing: border-box;
+}
+
+.terminal-header {
+  display: flex;
+  align-items: center;
+  padding: 6px 12px;
+  border-radius: 8px 8px 0 0;
+  margin: -16px -16px 16px -16px;
+}
+
+.terminal-header .dot {
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  margin-right: 6px;
+}
+
+.terminal-header .dot.red {
+  background: #ff5f56;
+}
+
+.terminal-header .dot.yellow {
+  background: #ffbd2e;
+}
+
+.terminal-header .dot.green {
+  background: #27c93f;
+}
+
+.terminal-body {
+  padding: 10px 16px !important;
+}

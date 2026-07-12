@@ -1,0 +1,93 @@
+.auroraGlow {
+  padding: 50px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+  box-sizing: border-box;
+}
+
+/* Moving gradient holographic stripes */
+.auroraGlow::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  animation: moveStripes 12s linear infinite;
+}
+
+@keyframes moveStripes {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(100px, 100px);
+  }
+}
+
+.auroraGlow-frame {
+  position: relative;
+  z-index: 2;
+  border-radius: 16px;
+  padding: 30px;
+}
+
+.auroraGlow-icon img {
+  margin-bottom: 10px;
+}
+
+.auroraGlow-prefix {
+  margin-bottom: 12px;
+}
+
+.auroraGlow-typing {
+  letter-spacing: 2px;
+  color: transparent;
+  background: linear-gradient(90deg, #ff00ff, #00ffff, #00ff6a, #ffae00);
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: glowText 3s infinite linear;
+}
+
+@keyframes glowText {
+  0% {
+    text-shadow: 0 0 10px #ff00ff, 0 0 20px #00ffff, 0 0 40px #ff00ff;
+  }
+
+  50% {
+    text-shadow: 0 0 20px #00ffff, 0 0 40px #00ff6a, 0 0 60px #ffae00;
+  }
+
+  100% {
+    text-shadow: 0 0 10px #ff00ff, 0 0 20px #00ffff, 0 0 40px #ff00ff;
+  }
+}
+
+.auroraGlow-suffix {
+  margin-top: 8px;
+  opacity: 0.9;
+}
+
+/* Custom glowing cursor */
+.auroraGlow .typed-cursor {
+  font-weight: 100;
+  color: #0ff;
+  animation: pulseGlow 1s infinite;
+}
+
+@keyframes pulseGlow {
+
+  0%,
+  100% {
+    opacity: 1;
+    text-shadow: 0 0 8px #0ff, 0 0 15px #0ff;
+  }
+
+  50% {
+    opacity: 0.5;
+    text-shadow: 0 0 4px #0ff, 0 0 8px #0ff;
+  }
+}

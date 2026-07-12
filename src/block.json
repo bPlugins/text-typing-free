@@ -1,10 +1,11 @@
 {
+  "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 3,
   "name": "ttb/text-typing",
   "title": "Text Typing",
-  "description": "Make your text in amazing typing effect.",
+  "description": "Add animated typing effects to your headings and text in the Gutenberg block editor.",
   "category": "widgets",
-  "keywords": ["typing text", "typing effect", "typed js"],
+  "keywords": ["typing text", "typing effect", "typed js", "text animation", "typewriter", "animated text", "typing animation", "headline", "rotating text"],
   "textdomain": "text-typing",
   "attributes": {
     "align": {
