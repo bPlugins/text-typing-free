@@ -1,11 +1,18 @@
+import { allBlocks } from "./blocks";
+
 const slug = "text-typing";
 
 export const dashboardInfo = (info) => {
   const {
     version,
+    isPremium,
+    hasPro,
+    licenseActiveNonce,
     adminUrl,
     uninstallNonce,
     deleteDataOnUninstall,
+    disabledBlocks = [],
+    disabledBlocksNonce,
   } = info;
 
   return {
@@ -15,11 +22,21 @@ export const dashboardInfo = (info) => {
       "Typing Text Block is a powerful and easy-to-use WordPress block that lets you create realistic typing text animations without any coding. Perfect for hero sections, banners, headlines, and call-to-action areas, it helps you highlight key messages in an engaging and modern way.",
     slug,
     version,
+    isPremium,
+    hasPro,
     adminUrl,
     uninstallNonce,
     deleteDataOnUninstall,
+    disabledBlocks,
+    disabledBlocksNonce,
+    licenseActiveNonce,
     displayOurPlugins: true,
-    showUpgrade: false,
+    showUpgrade: true,
+    freemius: {
+      product_id: 20170,
+      plan_id: 33453,
+      public_key: "pk_b0a805a4574f7a1db93e8859282de",
+    },
     media: {
       logo: `https://ps.w.org/${slug}/assets/icon-128x128.png`,
       banner: `https://ps.w.org/${slug}/assets/banner-772x250.png`,
@@ -32,6 +49,7 @@ export const dashboardInfo = (info) => {
       org: `https://wordpress.org/plugins/${slug}/`,
       landing: `https://bplugins.com/products/${slug}/`,
       docs: `https://bplugins.com/docs/typing-text-block/`,
+      pricing: `https://bplugins.com/products/${slug}/pricing`,
     },
     startButton: {
       label: "Start Now",
@@ -216,29 +234,18 @@ export const welcomeInfo = (adminUrl = "") => ({
   ],
   changelogsLimit: 5,
   changelogsReadMoreLabel: "View Full Changelog",
-});
 
-// Shared icon used by the additional theme demo entries below.
-const demoIcon = (
-  <svg
-    stroke="#000"
-    fill="#000"
-    strokeWidth="0"
-    viewBox="0 0 24 24"
-    height="1em"
-    width="1em"
-    xmlns="http://www.w3.org/2000/svg">
-    <path d="M5 9V7H7V9H5Z" fill="currentColor"></path>
-    <path d="M9 9H19V7H9V9Z" fill="currentColor"></path>
-    <path d="M5 15V17H7V15H5Z" fill="currentColor"></path>
-    <path d="M19 17H9V15H19V17Z" fill="currentColor"></path>
-    <path
-      fillRule="evenodd"
-      clipRule="evenodd"
-      d="M1 6C1 4.34315 2.34315 3 4 3H20C21.6569 3 23 4.34315 23 6V18C23 19.6569 21.6569 21 20 21H4C2.34315 21 1 19.6569 1 18V6ZM4 5H20C20.5523 5 21 5.44772 21 6V11H3V6C3 5.44772 3.44772 5 4 5ZM3 13V18C3 18.5523 3.44772 19 4 19H20C20.5523 19 21 18.5523 21 18V13H3Z"
-      fill="currentColor"></path>
-  </svg>
-);
+  // Bullets shown in the "Go Typing Text Pro & Unlock More!" upgrade card (free users only).
+  proFeatures: [
+    "24 premium blocks including Animated Headline, Rotating Words, Number Counter, and Text Marquee.",
+    "Eye-catching text styles: Gradient, Neon, Glitch, Rainbow, and Shine.",
+    "Advanced layouts: Circular, Curved, Vertical, Outline, and Text Mask.",
+    "Entrance animations: Split-Flap, Scramble, Tracking-In, and Wavy.",
+    "3D Tilt, Reflection, and Long Shadow effects.",
+    "Sticker, Animated Highlight, and Split text blocks.",
+    "Priority support.",
+  ],
+});
 
 export const demoInfo = {
   allInOneLabel: "See All Demos",
@@ -350,7 +357,7 @@ export const demoInfo = {
     },
     {
       title: "Aurora Glow",
-      description: "Shows every available control option.",
+      description: "Soft aurora gradient glow shifting behind the typing text.",
       url: "https://bblockswp.com/demo/typing-text-aurora-glow/",
       icon: (
         <svg
@@ -400,124 +407,24 @@ export const demoInfo = {
       ),
       type: "iframe",
     },
-    {
-      title: "Code Editor",
-      description: "Code-editor styling with a syntax-highlight feel.",
-      url: "https://bblockswp.com/demo/typing-text-code-editor/",
-      icon: demoIcon,
+    ...allBlocks.map((block) => ({
+      icon: block.icon,
+      title: block.title,
+      url: block.demo,
       type: "iframe",
-    },
-    {
-      title: "Gradient Flow",
-      description: "Gradient-filled text with a flowing color sweep.",
-      url: "https://bblockswp.com/demo/typing-text-gradient-flow/",
-      icon: demoIcon,
-      type: "iframe",
-    },
-    {
-      title: "Glitch Pulse",
-      description: "Cyberpunk RGB-split glitch with a scanline overlay.",
-      url: "https://bblockswp.com/demo/typing-text-glitch-pulse/",
-      icon: demoIcon,
-      type: "iframe",
-    },
-    {
-      title: "Vintage Typewriter",
-      description: "Aged-parchment typewriter with a mechanical ink press.",
-      url: "https://bblockswp.com/demo/typing-text-vintage-typewriter/",
-      icon: demoIcon,
-      type: "iframe",
-    },
-    {
-      title: "Block Stack",
-      description: "Bold 3D extruded headline that pops up per character.",
-      url: "https://bblockswp.com/demo/typing-text-block-stack/",
-      icon: demoIcon,
-      type: "iframe",
-    },
-    {
-      title: "Liquid Morph",
-      description: "Gooey liquid-metal characters that merge like mercury.",
-      url: "https://bblockswp.com/demo/typing-text-liquid-morph/",
-      icon: demoIcon,
-      type: "iframe",
-    },
-    {
-      title: "Ink Signature",
-      description: "Fountain-pen script with ink bleed and a signed flourish.",
-      url: "https://bblockswp.com/demo/typing-text-ink-signature/",
-      icon: demoIcon,
-      type: "iframe",
-    },
-    {
-      title: "Bounce Pop",
-      description: "Playful elastic letters that spring into place.",
-      url: "https://bblockswp.com/demo/typing-text-bounce-pop/",
-      icon: demoIcon,
-      type: "iframe",
-    },
-    {
-      title: "LED Marquee",
-      description: "Retro LED dot-matrix board with a marquee scan.",
-      url: "https://bblockswp.com/demo/typing-text-led-marquee/",
-      icon: demoIcon,
-      type: "iframe",
-    },
-    {
-      title: "Holo Foil",
-      description: "Iridescent holographic foil shimmer with a moving glint.",
-      url: "https://bblockswp.com/demo/typing-text-holo-foil/",
-      icon: demoIcon,
-      type: "iframe",
-    },
-    {
-      title: "Inferno Blaze",
-      description: "Flaming text with rising embers and heat haze.",
-      url: "https://bblockswp.com/demo/typing-text-inferno-blaze/",
-      icon: demoIcon,
-      type: "iframe",
-    },
-    {
-      title: "Matrix Rain",
-      description: "Hacker digital rain cascading behind glowing green text.",
-      url: "https://bblockswp.com/demo/typing-text-matrix-rain/",
-      icon: demoIcon,
-      type: "iframe",
-    },
-    {
-      title: "Comic Pop",
-      description: "Comic-book action panel with halftone dots and a starburst.",
-      url: "https://bblockswp.com/demo/typing-text-comic-pop/",
-      icon: demoIcon,
-      type: "iframe",
-    },
-    {
-      title: "Golden Luxe",
-      description: "Brushed-gold foil headline with a slow shine sweep.",
-      url: "https://bblockswp.com/demo/typing-text-golden-luxe/",
-      icon: demoIcon,
-      type: "iframe",
-    },
-    {
-      title: "Watercolor Ink",
-      description: "Soft watercolor pigment bleed on a paper wash.",
-      url: "https://bblockswp.com/demo/typing-text-watercolor-ink/",
-      icon: demoIcon,
-      type: "iframe",
-    },
-    {
-      title: "Frosted Glass",
-      description: "Translucent frosted-glass card with a drifting color blob.",
-      url: "https://bblockswp.com/demo/typing-text-frosted-glass/",
-      icon: demoIcon,
-      type: "iframe",
-    },
-    {
-      title: "Decrypt Cipher",
-      description: "HUD terminal decrypt effect cycling through cipher glyphs.",
-      url: "https://bblockswp.com/demo/typing-text-decrypt-cipher/",
-      icon: demoIcon,
-      type: "iframe",
-    },
+    })),
   ],
+};
+
+export const pricingInfo = {
+  logo: `https://ps.w.org/${slug}/assets/icon-128x128.png`,
+  pluginId: 20170,
+  planId: 33453,
+  licenses: [1, 3, null],
+  button: {
+    label: "Buy Now ➜",
+  },
+  featured: {
+    selected: 3, // choose from licenses item
+  },
 };

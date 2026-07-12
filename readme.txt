@@ -1,4 +1,4 @@
-=== Typing Text – Animated Typing Effect Block for Headings & Text ===
+=== Text Typing - Block  ===
 Contributors: bplugins, noornabi2, abuhayat, charlescormier
 Donate link: https://www.buymeacoffee.com/abuhayat
 Tags: block, typing text, typing effect, text animation, typewriter effect

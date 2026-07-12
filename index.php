@@ -45,6 +45,9 @@ if( !class_exists( 'TTBPlugin' ) ) {
 			// dashboard settings: delete data on uninstall
 			add_action('wp_ajax_ttbSaveUninstallOption', [$this, 'ttbSaveUninstallOption']);
 
+			// dashboard Blocks page: enable/disable individual blocks
+			add_action('wp_ajax_ttbDisabledBlocks', [$this, 'ttbDisabledBlocks']);
+
 			// Post Type function hooks 
 			add_action('init', array($this, 'ttb_text_typing_post_type'));
 
@@ -180,6 +183,30 @@ if( !class_exists( 'TTBPlugin' ) ) {
 				] );
 			}
 
+			// Persist the dashboard Blocks page enable/disable toggles.
+			function ttbDisabledBlocks() {
+				$nonce = isset( $_POST['_wpnonce'] ) ? sanitize_text_field( wp_unslash( $_POST['_wpnonce'] ) ) : '';
+				if ( ! wp_verify_nonce( $nonce, 'ttb_disabled_blocks' ) ) {
+					wp_send_json_error( [ 'message' => __( 'Invalid security token.', 'text-typing' ) ], 403 );
+				}
+
+				if ( ! current_user_can( 'manage_options' ) ) {
+					wp_send_json_error( [ 'message' => __( 'You do not have permission to perform this action.', 'text-typing' ) ], 403 );
+				}
+
+				// phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- decoded JSON, each element sanitized below.
+				$raw  = isset( $_POST['data'] ) ? wp_unslash( $_POST['data'] ) : '';
+				$data = is_string( $raw ) ? json_decode( $raw, true ) : null;
+
+				if ( is_array( $data ) ) {
+					$data = array_values( array_map( 'sanitize_text_field', $data ) );
+					update_option( 'ttbDisabledBlocks', $data );
+					wp_send_json_success( $data );
+				}
+
+				wp_send_json_success( get_option( 'ttbDisabledBlocks', [] ) );
+			}
+
 		function enqueueBlockAssets(){
 			wp_register_script( 'typedJS', TTB_DIR_URL . 'public/js/typed.min.js', [], '2.0.12', true );
 		}
@@ -207,8 +234,11 @@ if( !class_exists( 'TTBPlugin' ) ) {
 							'isPremium' => false,
 							'hasPro' => false,
 							'adminUrl' => admin_url(),
+							'licenseActiveNonce' => wp_create_nonce( 'bPlLicenseActivation' ),
 							'uninstallNonce' => wp_create_nonce( 'ttb_uninstall' ),
-							'deleteDataOnUninstall' => (bool) get_option( 'ttb_delete_data_on_uninstall', false )
+							'deleteDataOnUninstall' => (bool) get_option( 'ttb_delete_data_on_uninstall', false ),
+							'disabledBlocksNonce' => wp_create_nonce( 'ttb_disabled_blocks' ),
+							'disabledBlocks' => get_option( 'ttbDisabledBlocks', [] )
 						]))?>"
 						>
 				</div>

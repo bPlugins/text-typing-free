@@ -24,8 +24,7 @@ const ThemeSwitcher = ({
       <Tooltip text={isTooltip ? theme?.tooltip : null}>
         <Button
           className={`bpl_theme_picker-btn ${isActive ? "active" : ""}`}
-          onClick={() => handleSelect(theme?.value)}
-        >
+          onClick={() => handleSelect(theme?.value)}>
           <span>{theme?.label}</span>
         </Button>
       </Tooltip>
@@ -47,8 +46,7 @@ const ThemeSwitcher = ({
             className="theme-trigger"
             aria-expanded={open}
             onClick={() => setOpen((prev) => !prev)}
-            style={{ marginLeft: "1em" }}
-          >
+            style={{ marginLeft: "1em" }}>
             {__(buttonLabel, "text-typing")}
           </Button>
 
@@ -58,8 +56,7 @@ const ThemeSwitcher = ({
               className="bpl_theme_picker_popover"
               onClose={() => setOpen(false)}
               onFocusOutside={() => setOpen(false)}
-              focusOnMount={false}
-            >
+              focusOnMount={false}>
               <div className="bpl_theme_picker_popover-grid">
                 {existingThemes?.map((theme) => {
                   const isActive = value === theme?.value;
@@ -71,23 +68,26 @@ const ThemeSwitcher = ({
                       onClick={() => {
                         handleSelect(theme?.value);
                         setOpen(false);
-                      }}
-                    >
+                      }}>
                       <div
                         className="theme-preview"
-                        style={theme?.preview ? { background: theme.preview.bg } : undefined}
-                      >
+                        style={
+                          theme?.preview
+                            ? { background: theme.preview.bg }
+                            : undefined
+                        }>
                         <span
                           className="preview-sample"
-                          style={theme?.preview ? { color: theme.preview.color } : undefined}
-                        >
+                          style={
+                            theme?.preview
+                              ? { color: theme.preview.color }
+                              : undefined
+                          }>
                           Aa
                         </span>
                       </div>
 
-                      <span className="theme-name">
-                        {theme?.label}
-                      </span>
+                      <span className="theme-name">{theme?.label}</span>
                     </div>
                   );
                 })}
