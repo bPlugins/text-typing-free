@@ -20,7 +20,6 @@ if ( !defined( 'ABSPATH' ) ) {
 }
 
 
-
 if(function_exists('ttb_fs')){
 	ttb_fs()->set_basename(true, __FILE__);
 }else{
@@ -231,10 +230,7 @@ if( !class_exists( 'TTBPlugin' ) ) {
 				<div id="ttbDashboard"
 						data-info="<?php echo esc_attr(wp_json_encode([
 							'version'=>TTB_PLUGIN_VERSION,
-							'isPremium' => false,
-							'hasPro' => false,
 							'adminUrl' => admin_url(),
-							'licenseActiveNonce' => wp_create_nonce( 'bPlLicenseActivation' ),
 							'uninstallNonce' => wp_create_nonce( 'ttb_uninstall' ),
 							'deleteDataOnUninstall' => (bool) get_option( 'ttb_delete_data_on_uninstall', false ),
 							'disabledBlocksNonce' => wp_create_nonce( 'ttb_disabled_blocks' ),

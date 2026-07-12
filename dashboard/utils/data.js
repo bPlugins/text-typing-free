@@ -5,9 +5,6 @@ const slug = "text-typing";
 export const dashboardInfo = (info) => {
   const {
     version,
-    isPremium,
-    hasPro,
-    licenseActiveNonce,
     adminUrl,
     uninstallNonce,
     deleteDataOnUninstall,
@@ -17,19 +14,17 @@ export const dashboardInfo = (info) => {
 
   return {
     name: "Typing Text",
-    displayName: "Typing Text - Add Animated Typing Effects to Headings or Text",
+    displayName:
+      "Typing Text - Add Animated Typing Effects to Headings or Text",
     description:
       "Typing Text Block is a powerful and easy-to-use WordPress block that lets you create realistic typing text animations without any coding. Perfect for hero sections, banners, headlines, and call-to-action areas, it helps you highlight key messages in an engaging and modern way.",
     slug,
     version,
-    isPremium,
-    hasPro,
     adminUrl,
     uninstallNonce,
     deleteDataOnUninstall,
     disabledBlocks,
     disabledBlocksNonce,
-    licenseActiveNonce,
     displayOurPlugins: true,
     showUpgrade: true,
     freemius: {
