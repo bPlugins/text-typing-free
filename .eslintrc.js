@@ -18,7 +18,8 @@ module.exports = {
 		wp: 'readonly',
 		jQuery: 'readonly',
 		Typed: 'readonly',
-		wpApiSettings: 'readonly'
+		wpApiSettings: 'readonly',
+		ttbPricingUrl: 'readonly'
 	},
 	parserOptions: {
 		ecmaFeatures: {

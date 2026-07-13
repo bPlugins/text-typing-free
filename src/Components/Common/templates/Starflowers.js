@@ -136,20 +136,28 @@ const Starflower = ({ attributes }) => {
   };
 
   const generateConfetti = (letter) => {
+    // Use the letter's OWN document/window so confetti works both on the
+    // frontend and inside the editor iframe (WP 6.3+ iframes the canvas).
+    // Referencing the global `document`/`window` here would append confetti to
+    // the outer document while positioning it with iframe-relative coordinates.
+    const ownerDoc = letter.ownerDocument;
+    const ownerWin = ownerDoc.defaultView || window;
+
     for (let i = 0; i < 10 + Math.floor(Math.random() * 2); i++) {
-      const confetti = document.createElement("span");
+      const confetti = ownerDoc.createElement("span");
       confetti.textContent = shapes[Math.floor(Math.random() * shapes.length)];
       confetti.style.position = "absolute";
       confetti.style.color = colors[Math.floor(Math.random() * colors.length)].main;
       confetti.style.fontSize = "25px";
       confetti.style.pointerEvents = "none";
+      confetti.style.zIndex = "9999";
       confetti.classList.add('noornabi_shapes');
 
-      document.body.appendChild(confetti);
+      ownerDoc.body.appendChild(confetti);
 
       const rect = letter.getBoundingClientRect();
-      confetti.style.left = `${rect.left + rect.width / 2}px`;
-      confetti.style.top = `${rect.top + rect.height / 2 + window.scrollY}px`;
+      confetti.style.left = `${rect.left + rect.width / 2 + ownerWin.scrollX}px`;
+      confetti.style.top = `${rect.top + rect.height / 2 + ownerWin.scrollY}px`;
 
       const xDirection = (Math.random() - 0.5) * 200;
       const yDirection = (Math.random() - 0.5) * 200;

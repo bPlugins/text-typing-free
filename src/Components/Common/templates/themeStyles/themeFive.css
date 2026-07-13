@@ -9,7 +9,7 @@
 }
 
 /* animated gradient overlay */
-.cyberWave::before {
+/* .cyberWave::before {
   content: "";
   position: absolute;
   top: -50%;
@@ -19,7 +19,7 @@
   animation: rotateBg 12s linear infinite;
   opacity: 0.08;
   pointer-events: none;
-}
+} */
 
 @keyframes rotateBg {
   100% {

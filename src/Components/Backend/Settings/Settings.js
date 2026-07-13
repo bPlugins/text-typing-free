@@ -31,6 +31,7 @@ import {
   BorderControl,
   SpaceControl,
 } from "../../../../../bpl-tools/Components/Deprecated";
+import { AdvertiseCard } from "../../../../../bpl-tools/ProControls";
 import {
   tabController,
   updateData,
@@ -39,6 +40,7 @@ import {
 import { withSelect } from "@wordpress/data";
 import { produce } from "immer";
 import { themeSwitch } from "../../../utils/function";
+import { pricingUrl } from "../../../utils/data";
 import { generalStyleTabs, themePresets } from "../../../utils/options";
 import ThemeSwitcher from "../../../utils/panel/ThemeSwitcher";
 
@@ -716,6 +718,8 @@ const Settings = ({ attributes, setAttributes, device }) => {
             </>
           )}
         </TabPanel>
+
+        <AdvertiseCard planLink={pricingUrl} />
       </InspectorControls>
 
       <BlockControls>
