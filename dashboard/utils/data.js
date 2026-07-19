@@ -197,7 +197,7 @@ export const welcomeInfo = (adminUrl = "") => ({
   // Release notes — Changelog renders a colored badge from `type`.
   changelogs: [
     {
-      version: "2.1.0 - 13 July 26",
+      version: "2.1.0 - 14 July 26",
       type: "update",
       list: [
         "<strong>Update:</strong> The Terminal, Star Flower, Neon Grid, Aurora Glow, and Cyber Wave themes are now free for everyone. Together with Default, the free edition now includes six built-in themes.",

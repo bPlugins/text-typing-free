@@ -1,5 +1,5 @@
 === Text Typing - Block ===
-Contributors: bplugins, noornabi2, abuhayat, charlescormier
+Contributors: bplugins, abuhayat, charlescormier, himur98
 Donate link: https://www.buymeacoffee.com/abuhayat
 Tags: block, typing text, typing effect, text animation, animated headline
 Requires at least: 6.5
@@ -245,13 +245,37 @@ Please report security bugs found in the source code of the Typing Text plugin t
 3. Terminal
 4. Star Flower
 5. Neon Grid
-6. Aurora glow
+6. Aurora Glow
 7. Cyber Wave
+8. Animated Headline (pro)
+9. Split Text (pro)
+10. Rotating Words (pro)
+11. Scramble Text (pro)
+12. Tracking-In Text (pro)
+13. Number Counter (pro)
+14. Gradient Text (pro)
+15. Rainbow Text (pro)
+16. Shine Text (pro)
+17. Neon Text (pro)
+18. Glitch Text (pro)
+19. Outline Text (pro)
+20. Long Shadow Text (pro)
+21. Sticker Text (pro)
+22. Reflection Text (pro)
+23. Text Mask (pro)
+24. Curved Text (pro)
+25. Circular Text (pro)
+26. Vertical Text (pro)
+27. Text Marquee (pro)
+28. Split-Flap Text (pro)
+29. 3D Tilt Text (pro)
+30. Wavy Text (pro)
+31. Animated Highlight (pro)
 
 
 == Changelog ==
 
-= 2.1.0 - 13 July 2026 =
+= 2.1.0 - 14 July 2026 =
 - **Update**: The Terminal, Star Flower, Neon Grid, Aurora Glow, and Cyber Wave themes are now free for everyone. Together with Default, the free edition now includes six built-in themes.
 
 **New — Text Typing Pro block collection:**
