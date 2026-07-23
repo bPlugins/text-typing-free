@@ -1,4 +1,4 @@
-=== Text Typing - Block ===
+=== Text Typing - Animated Typing Text & Headline Effects ===
 Contributors: bplugins, abuhayat, charlescormier, himur98
 Donate link: https://www.buymeacoffee.com/abuhayat
 Tags: block, typing text, typing effect, text animation, animated headline
@@ -9,7 +9,7 @@ Requires PHP: 7.4
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
-Add animated typing effects to your headings and text directly in the Gutenberg block editor.
+Typing text block for Gutenberg - add animated typing text effects to your headings, hero titles & text with speed, loop & cursor controls.
 
 == Description ==
 
