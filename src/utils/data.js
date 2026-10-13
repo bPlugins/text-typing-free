@@ -3,7 +3,7 @@ export const prefix = 'ttbTextTyping';
 export const pricingUrl =
   typeof ttbPricingUrl !== 'undefined'
     ? ttbPricingUrl
-    : 'https://bplugins.com/products/text-typing/pricing';
+    : 'https://bplugins.com/products/text-typing/pricing/';
 
 export const blocksData = [
   {

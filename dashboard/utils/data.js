@@ -197,6 +197,16 @@ export const welcomeInfo = (adminUrl = "") => ({
   // Release notes — Changelog renders a colored badge from `type`.
   changelogs: [
     {
+      version: "2.2.0 - 13 Oct 26",
+      type: "new",
+      list: [
+        "<strong>Update:</strong> Freemius SDK updated to 2.13.5.",
+        "<strong>Fix:</strong> After activating the plugin, the page no longer says you are not allowed to access it. The Freemius opt-in now opens first, then the first page of the plugin.",
+        "<strong>New:</strong> Six ready-made sections under Typing Text and Headlines in the inserter. Each one comes finished with heading, typing line, copy and buttons.",
+        "<strong>Update:</strong> The ready-made sections switch the decorative icon off, so they add no outbound request to the page.",
+      ],
+    },
+    {
       version: "2.1.0 - 14 July 26",
       type: "update",
       list: [

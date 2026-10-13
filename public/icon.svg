@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-label="Text Typing — a giant blinking caret with the word 'type' materializing letter by letter">
+  <title>Text Typing — caret hero, letters materializing</title>
+  <defs>
+    <linearGradient id="ttpBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#146ef5"/>
+      <stop offset="1" stop-color="#6155f5"/>
+    </linearGradient>
+    <linearGradient id="ttpCaret" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#cfe1ff"/>
+    </linearGradient>
+    <radialGradient id="ttpGlow" cx="0.5" cy="0.46" r="0.62">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.30"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="ttpSheen" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#ffffff" stop-opacity="0.40"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="ttpTile"><rect x="0" y="0" width="256" height="256" rx="56"/></clipPath>
+  </defs>
+  <style>
+    :root { --ttp: 3.6s; }
+    .ttp-l { transform-box: fill-box; transform-origin: center; }
+    .ttp-l1 { animation: ttpL1 var(--ttp) ease-out infinite; }
+    .ttp-l2 { animation: ttpL2 var(--ttp) ease-out infinite; }
+    .ttp-l3 { animation: ttpL3 var(--ttp) ease-out infinite; }
+    .ttp-l4 { animation: ttpL4 var(--ttp) ease-out infinite; }
+    .ttp-caret { animation: ttpBlink var(--ttp) steps(1) infinite; }
+    .ttp-glow { animation: ttpPulse var(--ttp) ease-in-out infinite; }
+    .ttp-sheen { animation: ttpSweep var(--ttp) linear infinite; }
+    @keyframes ttpL1 {
+      0%,4%   { opacity: 0; transform: translateY(14px) scale(.5); }
+      9%      { opacity: 1; transform: translateY(-3px) scale(1.08); }
+      13%,76% { opacity: 1; transform: translateY(0) scale(1); }
+      84%,100%{ opacity: 0; transform: translateY(-6px) scale(.6); }
+    }
+    @keyframes ttpL2 {
+      0%,14%  { opacity: 0; transform: translateY(14px) scale(.5); }
+      19%     { opacity: 1; transform: translateY(-3px) scale(1.08); }
+      23%,76% { opacity: 1; transform: translateY(0) scale(1); }
+      84%,100%{ opacity: 0; transform: translateY(-6px) scale(.6); }
+    }
+    @keyframes ttpL3 {
+      0%,24%  { opacity: 0; transform: translateY(14px) scale(.5); }
+      29%     { opacity: 1; transform: translateY(-3px) scale(1.08); }
+      33%,76% { opacity: 1; transform: translateY(0) scale(1); }
+      84%,100%{ opacity: 0; transform: translateY(-6px) scale(.6); }
+    }
+    @keyframes ttpL4 {
+      0%,34%  { opacity: 0; transform: translateY(14px) scale(.5); }
+      39%     { opacity: 1; transform: translateY(-3px) scale(1.08); }
+      43%,76% { opacity: 1; transform: translateY(0) scale(1); }
+      84%,100%{ opacity: 0; transform: translateY(-6px) scale(.6); }
+    }
+    @keyframes ttpBlink {
+      0%,11%   { opacity: 1; }
+      12%,23%  { opacity: 0; }
+      24%,45%  { opacity: 1; }
+      46%,57%  { opacity: 0; }
+      58%,100% { opacity: 1; }
+    }
+    @keyframes ttpPulse { 0%,100% { opacity: .85; } 50% { opacity: 1; } }
+    @keyframes ttpSweep {
+      0% { transform: translateX(-160px); }
+      55%,100% { transform: translateX(330px); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .ttp-l1,.ttp-l2,.ttp-l3,.ttp-l4,.ttp-caret,.ttp-glow,.ttp-sheen { animation: none; }
+      .ttp-l { opacity: 1; transform: none; }
+      .ttp-caret { opacity: 1; }
+    }
+  </style>
+  <g clip-path="url(#ttpTile)">
+    <rect x="0" y="0" width="256" height="256" fill="url(#ttpBg)"/>
+    <circle class="ttp-glow" cx="120" cy="118" r="118" fill="url(#ttpGlow)"/>
+    <circle cx="56" cy="52" r="66" fill="#ffffff" opacity="0.08"/>
+    <g font-family="'Poppins','Segoe UI',system-ui,-apple-system,sans-serif" font-weight="800" font-size="86" fill="#ffffff">
+      <text class="ttp-l ttp-l1" x="44"  y="156" text-anchor="middle">t</text>
+      <text class="ttp-l ttp-l2" x="90"  y="156" text-anchor="middle">y</text>
+      <text class="ttp-l ttp-l3" x="140" y="156" text-anchor="middle">p</text>
+      <text class="ttp-l ttp-l4" x="188" y="156" text-anchor="middle">e</text>
+    </g>
+    <rect class="ttp-caret" x="218" y="86" width="15" height="80" rx="6" fill="url(#ttpCaret)"/>
+    <rect class="ttp-sheen" x="-70" y="0" width="70" height="256" fill="url(#ttpSheen)" transform="skewX(-16)"/>
+  </g>
+</svg>

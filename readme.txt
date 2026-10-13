@@ -1,130 +1,104 @@
-=== Text Typing - Animated Typing Text & Headline Effects ===
-Contributors: bplugins, abuhayat, charlescormier, himur98
-Donate link: https://www.buymeacoffee.com/abuhayat
+=== Text Typing – grab attention with animated typing headlines ===
+Contributors: abuhayat, bplugins, himur98, freemius
 Tags: block, typing text, typing effect, text animation, animated headline
-Requires at least: 6.5
-Tested up to: 7.0
-Stable tag: 2.1.0
+Tested up to: 7.1
+Stable tag: 2.2.0
 Requires PHP: 7.4
+Requires at least: 6.5
+Donate link: https://www.buymeacoffee.com/abuhayat
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
-Typing text block for Gutenberg - add animated typing text effects to your headings, hero titles & text with speed, loop & cursor controls.
+Typing text block for Gutenberg – animated typing effects for headings, hero titles & text with speed, loop & cursor controls plus six free themes.
 
 == Description ==
 
-[Typing Text Block](https://bplugins.com/products/text-typing/) is a lightweight WordPress plugin that adds realistic animated typing effects to your headings and text — directly inside the Gutenberg block editor, with no coding required.
+**Make your hero titles and headlines type themselves – realistic animated typing effects that pull visitors' eyes straight to your key message.**
 
-**[Typing Text Block](https://bplugins.com/products/text-typing/)** | **[Pricing](https://bplugins.com/products/text-typing/pricing/)** | **[Support](https://bplugins.com/support/)** | **[Demo](https://bplugins.com/products/text-typing/#demos)**
+[**Typing Text Block**](https://bplugins.com/products/text-typing/) | [**Documentation**](https://bplugins.com/docs/typing-text-block/) | [**Pricing**](https://bplugins.com/products/text-typing/pricing/) | [**Support**](https://bplugins.com/support/) | [**Demo**](https://bplugins.com/products/text-typing/#demos)
 
-Perfect for hero sections, banners, headlines, and call-to-action areas, the Typing Text Block lets you highlight key messages with an engaging, modern typing animation. Write a prefix, one or more rotating typing lines, and a suffix, then fine-tune the speed, delay, looping, and cursor to match your design.
+### Why Text Typing?
+
+**Text Typing** is a lightweight WordPress plugin that adds realistic animated typing effects to your headings and text – directly inside the Gutenberg block editor, with no coding required. Write a prefix, one or more rotating typing lines, and a suffix, then fine-tune the speed, delay, looping, and cursor to match your design.
+
+Perfect for hero sections, banners, headlines, and call-to-action areas, it lets you highlight key messages with an engaging, modern typing animation. Six ready-made themes are included free, scripts load only on pages that use the block, and a shortcode generator lets you reuse saved typing texts anywhere.
 
 The free plugin is fully functional on its own. A separate **Text Typing Pro** upgrade adds a complete collection of animated text and heading blocks, all grouped under a single **Text Typing** category in the block inserter.
 
-=== Key Features – Free Version ===
-The free version includes everything needed to add animated typing text in the Gutenberg editor.
+### Free Features – Everything You Need to Get Started
 
-- **Animated Typing Text Block**: Add a clean, fully responsive typing animation anywhere in the block editor.
-- **Built-in Themes**: Six ready-made themes included free — Default, Terminal, Star Flower, Neon Grid, Aurora Glow, and Cyber Wave.
-- **Prefix & Suffix Text**: Add static text before and after the animated typing lines.
-- **Multiple Typing Lines**: Add unlimited rotating lines, each with its own color.
-- **Typing Controls**: Configure Type Speed, Start Delay, Back Speed, Back Delay, Shuffle, Fade Out Effect, Fade Out Delay, Loop, Loop Count, Cursor, and a custom Cursor Character.
-- **Typography Controls**: Customize fonts for the prefix, typing, and suffix text.
-- **Color Controls**: Set prefix and suffix text colors.
-- **Layout & Styling**: Control alignment (including wide and full block width), padding, border, and background.
-- **Responsive Width**: Set the width separately for desktop, tablet, and mobile.
-- **Shortcode Generator**: Build a saved typing text and reuse it anywhere with a simple shortcode.
-- **Block Manager**: Enable or disable individual blocks from the plugin dashboard so the inserter shows only what you use.
-- **Optimized Script Loading**: Scripts load only when the block is used, keeping pages fast.
-- **Clean Uninstall Option**: Optionally remove all plugin data when you delete the plugin, from the dashboard Settings page.
-- **Translation Ready**: Fully compatible with multilingual websites.
+- **Animated Typing Text Block:** A clean, fully responsive typing animation anywhere in the block editor.
+- **Built-in Themes:** Six ready-made themes included free – Default, Terminal, Star Flower, Neon Grid, Aurora Glow, and Cyber Wave.
+- **Prefix & Suffix Text:** Add static text before and after the animated typing lines.
+- **Multiple Typing Lines:** Add unlimited rotating lines, each with its own color.
+- **Typing Controls:** Type Speed, Start Delay, Back Speed, Back Delay, Shuffle, Fade Out Effect, Fade Out Delay, Loop, Loop Count, Cursor, and a custom Cursor Character.
+- **Typography Controls:** Customize fonts for the prefix, typing, and suffix text.
+- **Color Controls:** Set prefix and suffix text colors.
+- **Layout & Styling:** Control alignment (including wide and full block width), padding, border, and background.
+- **Responsive Width:** Set the width separately for desktop, tablet, and mobile.
+- **Shortcode Generator:** Build a saved typing text and reuse it anywhere with a simple shortcode.
+- **Block Manager:** Enable or disable individual blocks from the plugin dashboard so the inserter shows only what you use.
+- **Optimized Script Loading:** Scripts load only when the block is used, keeping pages fast.
+- **Clean Uninstall Option:** Optionally remove all plugin data when you delete the plugin.
+- **Translation Ready:** Fully compatible with multilingual websites.
 
-=== Text Typing Pro – Unlock the Full Animated Text Collection ===
-[Text Typing Pro](https://bplugins.com/products/text-typing/pricing/) extends the free plugin with a full library of animated text and heading blocks plus advanced styling. All Pro blocks are visible in the inserter so you can preview them; a license unlocks them on the front end.
+### Pro Version – Unlock the Full Animated Text Collection
 
-== Pro Animated Text & Heading Blocks ==
+[**Text Typing Pro**](https://bplugins.com/products/text-typing/pricing/) extends the free plugin with a full library of animated text and heading blocks plus advanced styling. All Pro blocks are visible in the inserter so you can preview them; a license unlocks them on the front end.
 
-- **Animated Headline** — Reveal headings with cinematic, scroll-triggered text animations: letter, word, or line stagger with an optional highlighted word.
-- **Split Text** — A staggered reveal where each letter or word animates in one after another for an eye-catching entrance.
-- **Rotating Words** — A headline with one word that cycles through a list — slide, flip, fade, or zoom between words.
-- **Scramble Text** — A "decode" reveal where each letter cycles through random glyphs and settles to the target as it scrolls into view.
-- **Tracking-In Text** — A heading that reveals by animating its letter-spacing — expanding from tight or contracting from wide — with a soft fade.
-- **Number Counter** — Animated count-up numbers that fire when scrolled into view — perfect for stats, results, and "trusted by" rows.
-- **Gradient Text** — A bold heading filled with a multi-stop gradient that can flow continuously across the text.
-- **Rainbow Text** — A heading whose color cycles smoothly through the rainbow — fun and impossible to miss.
-- **Shine Text** — A glossy metallic heading with a continuous shine that sweeps across the letters.
-- **Neon Text** — A glowing neon-sign heading with an optional realistic flicker — perfect for dark hero sections.
-- **Glitch Text** — A cyberpunk RGB-split glitch heading that continuously distorts — bold and attention-grabbing.
-- **Outline Text** — Bold hollow / outlined display headings that fill in on scroll or hover.
-- **Long Shadow Text** — A bold flat-design heading that casts a long diagonal shadow — clean, modern, and eye-catching.
-- **Sticker Text** — A bold retro / poster-style heading with a solid 3D offset shadow and an outline stroke.
-- **Reflection Text** — A glossy heading with a soft, fading mirror reflection beneath it.
-- **Text Mask** — Show an image or gradient clipped inside bold text — the classic knockout / image-in-text hero effect.
-- **Curved Text** — A heading that curves along an arc — arch it up or down for banners, badges, and playful titles.
-- **Circular Text** — Wrap text around a circle — perfect for badges, seals, stamps, and spinning circular call-to-actions.
-- **Vertical Text** — A heading that runs vertically — perfect for sidebar labels, section dividers, and editorial layouts.
-- **Text Marquee** — An infinite, seamless scrolling text band — great for "trusted by", skills, announcements, and tickers.
-- **Split-Flap Text** — A departure-board style heading where each letter sits in a card and flips into place as it scrolls into view.
-- **3D Tilt Text** — An interactive headline card that tilts in 3D and catches the light as the visitor moves their cursor.
-- **Wavy Text** — A heading whose letters ride a continuous, flowing wave — a playful, eye-catching micro-animation.
-- **Animated Highlight** — Draw a hand-style annotation — underline, strike, circle, box, or highlighter — around a word as it scrolls into view.
+**Pro animated text & heading blocks:**
 
-== More Pro Features ==
+- **Animated Headline** – cinematic, scroll-triggered reveals with letter, word, or line stagger and an optional highlighted word.
+- **Split Text** – a staggered reveal where each letter or word animates in one after another.
+- **Rotating Words** – a headline with one word that cycles through a list – slide, flip, fade, or zoom.
+- **Scramble Text** – a "decode" reveal where letters cycle through random glyphs and settle into place.
+- **Tracking-In Text** – headings that reveal by animating letter-spacing with a soft fade.
+- **Number Counter** – animated count-up numbers that fire on scroll – perfect for stats and results.
+- **Gradient, Rainbow, Shine, Neon & Glitch Text** – bold color and glow effects that are impossible to miss.
+- **Outline, Long Shadow, Sticker & Reflection Text** – striking display-heading styles for modern layouts.
+- **Text Mask** – show an image or gradient clipped inside bold text – the classic knockout hero effect.
+- **Curved, Circular & Vertical Text** – arch text along an arc, wrap it around a circle, or run it vertically.
+- **Text Marquee** – an infinite, seamless scrolling text band for "trusted by" rows and tickers.
+- **Split-Flap Text, 3D Tilt Text, Wavy Text & Animated Highlight** – playful, interactive attention-grabbers.
 
-- **Custom Colors & Gradients**: Text, cursor, and background with smooth gradient support.
-- **Text Shadow Effects**: Add depth, glow, or emphasis to your text.
-- **Cursor Styling**: Change cursor style, size, and color.
-- **Icons for Each Text**: Add icons before or after the typing text, with size and appearance controls.
-- **Full Responsive Settings**: Fine-tune font size, alignment, and appearance per device.
-- **Reduced-Motion Aware**: Animations honor the visitor's `prefers-reduced-motion` setting.
-- **Priority Support**: Faster assistance and updates.
+**More Pro features:**
 
-[Get Text Typing Pro](https://bplugins.com/products/text-typing/pricing/) – Unlock the full block collection and advanced effects now!
+- **Custom Colors & Gradients:** Text, cursor, and background with smooth gradient support.
+- **Text Shadow Effects:** Add depth, glow, or emphasis.
+- **Cursor Styling:** Change cursor style, size, and color.
+- **Icons for Each Text:** Add icons before or after the typing text with size controls.
+- **Full Responsive Settings:** Fine-tune font size, alignment, and appearance per device.
+- **Reduced-Motion Aware:** Animations honor the visitor's `prefers-reduced-motion` setting.
+- **Priority Support:** Faster assistance and updates.
 
-=== How to Use Typing Text – Step-by-Step Guide ===
+[**Get Text Typing Pro**](https://bplugins.com/products/text-typing/pricing/) – unlock the full block collection and advanced effects now!
 
-Getting started with the Typing Text Block is quick and easy.
+### How to Use Text Typing – Quick Start
 
-== Insert the Typing Text Block ==
+1. Open any page or post in the WordPress block editor (Gutenberg).
+2. Click the **+ (Add Block)** button and search for **"Text Typing"** (or browse the **Text Typing** category).
+3. Add your prefix, one or more rotating typing lines (each with its own color), and suffix text.
+4. Adjust speed, delays, loop, cursor, typography, colors, and layout from the block sidebar.
+5. Preview on different devices, then publish.
 
-- Open any Page or Post in the WordPress Block Editor (Gutenberg).
-- Click the + (Add Block) button.
-- Search for "Text Typing" (or browse the **Text Typing** category to see every block).
-- Insert the block into your page.
+**Reuse with the Shortcode Generator:** Go to **Text Typing → ShortCode Generator** in the WordPress admin, create a saved typing text, and paste the generated `[text-typing id="123"]` shortcode anywhere on your site.
 
-== Configure the Typing ==
+[**Demo**](https://bplugins.com/products/text-typing/#demos) | [**Get Text Typing Pro**](https://bplugins.com/products/text-typing/pricing/)
 
-- Add your prefix, one or more rotating typing lines (each with its own color), and suffix text.
-- Adjust Type Speed, Start Delay, Back Speed, Back Delay, Shuffle, Fade Out, Fade Out Delay, Loop, Loop Count, and the cursor (show/hide and cursor character).
-- Style the typography, colors, background, border, width, padding, and alignment.
+### Use Cases
 
-== Reuse with the Shortcode Generator ==
+- **Hero Sections:** Rotate through your key value propositions as they type out.
+- **Banners & CTAs:** Draw attention to offers and announcements with motion.
+- **Portfolios:** Cycle through roles or skills ("Designer… Developer… Creator…").
+- **Landing Pages:** Combine typing text with Pro heading effects for high-impact pages.
 
-- Go to Text Typing → ShortCode Generator in the WordPress admin to create a saved typing text.
-- Copy the generated `[text-typing id="123"]` shortcode and paste it anywhere on your site.
-
-== Preview and Publish ==
-
-Preview the page to see how your typing text appears on different devices, then publish.
-
-For installation help, see the Installation tab.
-
-[Demo](https://bplugins.com/products/text-typing/#demos) | [Get Text Typing Pro](https://bplugins.com/products/text-typing/pricing/)
-
-
-= Feedback =
-
-- Did you like this plugin? Dislike it? Do you have a feature request? [Please share your feedback with us](mailto:support@bplugins.com 'Send feedback')
-
+Did you like this plugin? Do you have a feature request? [Please share your feedback with us](mailto:support@bplugins.com 'Send feedback')
 
 ### Check Out The Parent Plugin of This Plugin-
 
 [**B Blocks**](https://bblockswp.com) – A blocks collection and page building tool for Gutenberg.
 
-
-= Related Plugins =
-
-Other plugins by our team:
+### Check Out Our Other WordPress Plugins-
 
 [**Html5 Video Player**](https://bplugins.com/products/html5-video-player/) – Display videos as single and playlist in multiple skins.
 
@@ -138,105 +112,70 @@ Other plugins by our team:
 
 [**Advanced Post Block**](https://bplugins.com/products/advanced-post-block/) – Show posts and custom posts in different layouts.
 
-
-== Third-Party Libraries ==
-
-This plugin uses the following third-party libraries:
-
-* [typed.js](https://github.com/mattboldt/typed.js) - MIT License (bundled at `public/js/typed.min.js`, powers the typing animation)
-* [textillate.js](https://github.com/jschr/textillate) - MIT License (bundled at `public/js/jquery.textillate.min.js`, enqueued as a dependency of the Text Typing block)
-
-= bpl-tools =
-* Source / GitHub: https://github.com/bPlugins/bpl-tools
-* License: GPL-2.0-or-later – https://www.gnu.org/licenses/gpl-2.0.html
-* Purpose: Shared utility library providing admin dashboard components and common Gutenberg editor controls.
-* External Services: The library may connect to bPlugins, WordPress.org, and Freemius services for product data and checkout functionality. See full details: https://github.com/bPlugins/bpl-tools#external-requests--why-they-are-made
-
-As the external service functionality is handled by bpl-tools as a third-party library, the following services are utilized:
-
-= bPlugins API =
-
-* **Service URL:** [https://api.bplugins.com](https://api.bplugins.com)
-* **Purpose:** The plugin's admin dashboard fetches product comparison data and pricing information to display relevant upgrade options and feature details.
-* **Data Sent:** Only the plugin slug is transmitted; no personal or site data is collected.
-* **Terms of Service:** [https://bplugins.com/terms-of-service/](https://bplugins.com/terms-of-service/)
-* **Privacy Policy:** [https://bplugins.com/privacy-policy/](https://bplugins.com/privacy-policy/)
-
-= WordPress.org Plugins API =
-
-* **Service URL:** [https://api.wordpress.org/plugins/info/1.2/](https://api.wordpress.org/plugins/info/1.2/)
-* **Purpose:** The admin dashboard queries the official WordPress.org Plugins API to retrieve and display a curated list of other plugins by the same author ("Our Plugins" section).
-* **Data Sent:** Plugin slugs and author name; no personal or site data is collected.
-* **Terms of Service:** [https://wordpress.org/about/tos/](https://wordpress.org/about/tos/)
-* **Privacy Policy:** [https://wordpress.org/about/privacy/](https://wordpress.org/about/privacy/)
-
-
-== Build Process ==
-
-This plugin uses a build process to generate the production assets (JS/CSS) located in the `build/` directory. The human-readable source code (the `src/` and `dashboard/` directories) is published in the public GitHub repository linked below.
-
-To build the plugin from source:
-1. Clone the repository: https://github.com/bPlugins/text-typing-free
-2. Install dependencies: `npm install`
-3. Run the build command: `npm run build`
-
-Build Tools Used: Webpack, Babel, PostCSS.
-
-
 == Installation ==
 
-= From Gutenberg Editor =
+**From your WordPress dashboard (recommended):**
 
-1. Open the block editor.
-2. Click Add Block (+).
-3. Search for "Text Typing".
-4. Insert the block.
+1. Go to **Plugins → Add New**.
+2. Search for **"Text Typing"**.
+3. Click **Install Now**, then **Activate**.
+4. Open the block editor, click **Add Block (+)**, search for **"Text Typing"**, and insert the block.
 
-= Upload Plugin =
+**Manual installation:**
 
 1. Download the plugin ZIP file.
-2. Go to Plugins → Add New → Upload Plugin.
-3. Upload `text-typing.zip`.
-4. Click Install Now and activate.
-
-= Manual Installation =
-
-1. Upload the plugin folder to `/wp-content/plugins/`.
-2. Activate the plugin from the Plugins menu.
-
+2. Go to **Plugins → Add New → Upload Plugin**, upload `text-typing.zip`, and click **Install Now**.
+3. Activate the plugin from the **Plugins** menu.
 
 == Frequently Asked Questions ==
 
-= Is Typing Text free? =
+= Is Text Typing free? =
+
 Yes. The free version is fully functional and includes the typing block, six built-in themes (Default, Terminal, Star Flower, Neon Grid, Aurora Glow, and Cyber Wave), prefix/suffix text, speed and delay controls, loop, cursor, typography, colors, and layout styling. A separate Pro version adds a full collection of animated text and heading blocks plus advanced effects.
 
 = What blocks are included? =
-The free plugin includes the animated **Text Typing** block. **Text Typing Pro** adds a collection of animated text and heading blocks — Animated Headline, Split Text, Rotating Words, Scramble Text, Tracking-In Text, Number Counter, Gradient Text, Rainbow Text, Shine Text, Neon Text, Glitch Text, Outline Text, Long Shadow Text, Sticker Text, Reflection Text, Text Mask, Curved Text, Circular Text, Vertical Text, Text Marquee, Split-Flap Text, 3D Tilt Text, Wavy Text, and Animated Highlight. All blocks appear together under the "Text Typing" category in the inserter.
+
+The free plugin includes the animated **Text Typing** block. **Text Typing Pro** adds a collection of animated text and heading blocks – Animated Headline, Split Text, Rotating Words, Scramble Text, Tracking-In Text, Number Counter, Gradient Text, Rainbow Text, Shine Text, Neon Text, Glitch Text, Outline Text, Long Shadow Text, Sticker Text, Reflection Text, Text Mask, Curved Text, Circular Text, Vertical Text, Text Marquee, Split-Flap Text, 3D Tilt Text, Wavy Text, and Animated Highlight. All blocks appear together under the "Text Typing" category in the inserter.
 
 = What extra features are included in Pro? =
-Pro adds a full collection of animated text and heading blocks (see above), plus gradients, text shadows, cursor styling, icons, and additional responsive controls.
+
+Pro adds the full collection of animated text and heading blocks (see above), plus gradients, text shadows, cursor styling, icons, and additional responsive controls.
 
 = Can I hide blocks I don't use? =
+
 Yes. Open the plugin dashboard and use the Blocks page to enable or disable individual blocks. Disabled blocks are removed from the inserter (the core Text Typing block is always available).
 
+= Can I reuse a typing text with a shortcode? =
+
+Yes. Go to **Text Typing → ShortCode Generator** in the admin, create a saved typing text, and paste the generated `[text-typing id="123"]` shortcode anywhere on your site.
+
+= Will the typing animation slow down my website? =
+
+No. Scripts are only loaded on pages where the block is actually used, keeping the rest of your site fast.
+
 = Does it work with any WordPress theme? =
+
 Yes. It works with any standard WordPress theme.
 
 = Can I change the block settings? =
+
 Yes. You can configure everything from the block settings sidebar in the editor.
 
 = How many times can I reuse the block? =
+
 As many times as you like. You can also save a typing text and reuse it anywhere with the Shortcode Generator.
 
 = Will my animations respect reduced-motion preferences? =
+
 Yes. Animations honor the visitor's `prefers-reduced-motion` browser/OS setting for better accessibility.
 
 = Where can I get support? =
+
 You can post your questions on the [support forum here](https://wordpress.org/support/plugin/text-typing).
 
 = Where do I report security bugs found in this plugin? =
-Please report security bugs found in the source code of the Typing Text plugin through the [Patchstack Vulnerability Disclosure Program](https://patchstack.com/database/vdp/9e5fc6ad-dcc3-49a7-a4d5-340a982f51ea). The Patchstack team will assist you with verification, CVE assignment, and notify the developers of this plugin.
 
+Please report security bugs found in the source code of the Typing Text plugin through the [Patchstack Vulnerability Disclosure Program](https://patchstack.com/database/vdp/9e5fc6ad-dcc3-49a7-a4d5-340a982f51ea). The Patchstack team will assist you with verification, CVE assignment, and notify the developers of this plugin.
 
 == Screenshots ==
 
@@ -272,8 +211,56 @@ Please report security bugs found in the source code of the Typing Text plugin t
 30. Wavy Text (pro)
 31. Animated Highlight (pro)
 
+== Build Process ==
+
+This plugin uses a build process to generate the production assets (JS/CSS) located in the `build/` directory. The human-readable source code (the `src/` and `dashboard/` directories) is published in the public GitHub repository linked below.
+
+To build the plugin from source:
+1. Clone the repository: https://github.com/bPlugins/text-typing-free
+2. Install dependencies: `npm install`
+3. Run the build command: `npm run build`
+
+Build Tools Used: Webpack, Babel, PostCSS.
+
+== Third-Party Libraries ==
+
+This plugin uses the following third-party libraries:
+
+* [typed.js](https://github.com/mattboldt/typed.js) - MIT License (bundled at `public/js/typed.min.js`, powers the typing animation)
+* [textillate.js](https://github.com/jschr/textillate) - MIT License (bundled at `public/js/jquery.textillate.min.js`, enqueued as a dependency of the Text Typing block)
+
+= bpl-tools =
+* Source / GitHub: https://github.com/bPlugins/bpl-tools
+* License: GPL-2.0-or-later – https://www.gnu.org/licenses/gpl-2.0.html
+* Purpose: Shared utility library providing admin dashboard components and common Gutenberg editor controls.
+* External Services: The library may connect to bPlugins, WordPress.org, and Freemius services for product data and checkout functionality. See full details: https://github.com/bPlugins/bpl-tools#external-requests--why-they-are-made
+
+As the external service functionality is handled by bpl-tools as a third-party library, the following services are utilized:
+
+= bPlugins API =
+
+* **Service URL:** [https://api.bplugins.com](https://api.bplugins.com)
+* **Purpose:** The plugin's admin dashboard fetches product comparison data and pricing information to display relevant upgrade options and feature details.
+* **Data Sent:** Only the plugin slug is transmitted; no personal or site data is collected.
+* **Terms of Service:** [https://bplugins.com/terms-of-service/](https://bplugins.com/terms-of-service/)
+* **Privacy Policy:** [https://bplugins.com/privacy-policy/](https://bplugins.com/privacy-policy/)
+
+= WordPress.org Plugins API =
+
+* **Service URL:** [https://api.wordpress.org/plugins/info/1.2/](https://api.wordpress.org/plugins/info/1.2/)
+* **Purpose:** The admin dashboard queries the official WordPress.org Plugins API to retrieve and display a curated list of other plugins by the same author ("Our Plugins" section).
+* **Data Sent:** Plugin slugs and author name; no personal or site data is collected.
+* **Terms of Service:** [https://wordpress.org/about/tos/](https://wordpress.org/about/tos/)
+* **Privacy Policy:** [https://wordpress.org/about/privacy/](https://wordpress.org/about/privacy/)
 
 == Changelog ==
+
+= 2.2.0 - 13 October 2026 =
+- **Update**: Freemius SDK updated to 2.13.5.
+- **Fix**: After activating the plugin, the page no longer says you are not allowed to access it. The Freemius opt-in now opens first, then the first page of the plugin.
+- **New — six ready-made sections.** The block used to arrive from the inserter as a single typing line on an empty page, which is a long way from the hero or launch screen most people came here to build. Six patterns now ship under **Typing Text & Headlines** in the inserter: Agency hero with rotating services, Developer terminal hero, SaaS hero with gradient headline, Coming soon screen, Section heading with rotating focus, and a Call-to-action band.
+- Each one arrives finished — heading, typing line, supporting copy and buttons, sized and coloured — rather than as a default block to build out by hand. Every built-in theme is used by at least one of them, so the six themes are discoverable by inserting a section instead of by reading the settings panel.
+- The patterns switch the decorative icon **off**. It is on by default and points at an image on a third-party host, so a pattern that left it alone would have put an outbound request on the page before you had chosen anything.
 
 = 2.1.0 - 14 July 2026 =
 - **Update**: The Terminal, Star Flower, Neon Grid, Aurora Glow, and Cyber Wave themes are now free for everyone. Together with Default, the free edition now includes six built-in themes.
@@ -305,11 +292,11 @@ Please report security bugs found in the source code of the Typing Text plugin t
 - **New**: Instantly switch between predefined themes to change the typing text appearance.
 
 = 2.0.4 - 17 Jan 26 =
-* Dashboard info updated
+* Dashboard info updated.
 
 = 2.0.3 - 16 Nov 25 =
-* freemius latest sdk version updated and demo page created
-* Demo page created for this plugin
+* freemius latest sdk version updated and demo page created.
+* Demo page created for this plugin.
 
 = 2.0.2 - 5 Nov 25 =
 * freemius_lite sdk version updated

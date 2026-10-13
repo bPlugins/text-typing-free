@@ -2,9 +2,9 @@
 /**
  * Plugin Name: Text Typing - Block
  * Description: Make your text in amazing typing effect.
- * Version: 2.1.0
- * Tested up to: 7.0
+ * Version: 2.2.0
  * Requires PHP: 7.4
+ * Requires at least: 6.5
  * Author: bPlugins
  * Author URI: https://bplugins.com
  * License: GPLv3
@@ -24,12 +24,15 @@ if(function_exists('ttb_fs')){
 	ttb_fs()->set_basename(true, __FILE__);
 }else{
 // Constant
-define( 'TTB_PLUGIN_VERSION', isset( $_SERVER['HTTP_HOST'] ) && 'localhost' === $_SERVER['HTTP_HOST'] ? time() : '2.1.0' );
+define( 'TTB_PLUGIN_VERSION', isset( $_SERVER['HTTP_HOST'] ) && 'localhost' === $_SERVER['HTTP_HOST'] ? time() : '2.2.0' );
 define( 'TTB_DIR_URL', plugin_dir_url( __FILE__ ) );
 define( 'TTB_DIR_PATH', plugin_dir_path( __FILE__ ) );
 
 // Freemius Lite SDK bootstrap — defines the ttb_fs() helper.
 require_once TTB_DIR_PATH . 'includes/fs-lite.php';
+
+// Ready-made sections for the inserter.
+require_once TTB_DIR_PATH . 'includes/patterns.php';
 
 if( !class_exists( 'TTBPlugin' ) ) {
 	class TTBPlugin {
@@ -39,6 +42,7 @@ if( !class_exists( 'TTBPlugin' ) ) {
 
 			// sub menu function hooks
 			add_action('admin_menu', [$this, 'addSubmenu']);
+			add_action('admin_head', [$this, 'highlightHelpDemoMenu']);
 			add_action('admin_enqueue_scripts', [$this, 'adminEnqueueScripts']);
 
 			// dashboard settings: delete data on uninstall
@@ -56,8 +60,46 @@ if( !class_exists( 'TTBPlugin' ) ) {
 			//manage column 
 			add_filter('manage_text-typing_posts_columns', [$this, 'textTypingManageColumns'], 10);
 
-			// Custom manage column 
+			// Custom manage column
 			add_action('manage_text-typing_posts_custom_column', [$this, 'textTypingManageCustomColumns'], 10, 2);
+
+			// Redirect to the Help & Demo page on first activation.
+			register_activation_hook( __FILE__, [ $this, 'onActivation' ] );
+			add_action( 'admin_init', [ $this, 'maybeRedirectAfterActivation' ] );
+		}
+
+		/**
+		 * Set a flag so we know a redirect is needed on the next admin page load.
+		 */
+		function onActivation() {
+			update_option( 'ttb_activation_redirect', true );
+		}
+
+		/**
+		 * Redirect to the Help & Demos dashboard page once after activation.
+		 */
+		function maybeRedirectAfterActivation() {
+			if ( ! get_option( 'ttb_activation_redirect', false ) ) {
+				return;
+			}
+
+			delete_option( 'ttb_activation_redirect' );
+
+			// Don't redirect on bulk activate or WP-CLI.
+			// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+			$activate_multi = isset( $_GET['activate-multi'] ) ? sanitize_text_field( wp_unslash( $_GET['activate-multi'] ) ) : '';
+			if ( wp_doing_ajax() || ( defined( 'WP_CLI' ) && WP_CLI ) || ! empty( $activate_multi ) ) {
+				return;
+			}
+
+			// The Freemius opt-in screen hides this plugin's menu until it is answered, so the page below
+			// would say "not allowed". Let Freemius show its opt-in first; it opens the first page after.
+			if ( function_exists( 'ttb_fs' ) && ttb_fs()->is_activation_mode() ) {
+				return;
+			}
+
+			wp_safe_redirect( admin_url( 'edit.php?post_type=text-typing&page=ttb_demo_page' ) );
+			exit;
 		}
 
 		//manage column
@@ -213,6 +255,26 @@ if( !class_exists( 'TTBPlugin' ) ) {
 		function onInit() {
 			register_block_type( __DIR__ . '/build' );
 		}
+
+		/**
+		 * Color the "Help & Demos" submenu link so it stands out in the sidebar, the same
+		 * treatment Image Gallery and Testimonials Block give theirs. One inline <style>
+		 * since the sidebar persists across every admin screen.
+		 */
+		function highlightHelpDemoMenu() { ?>
+			<style>
+				#adminmenu a[href*="page=ttb_demo_page"],
+				#adminmenu a[href*="page=ttb_demo_page"] *,
+				#adminmenu a[href*="page=ttb_demo_page"]:hover,
+				#adminmenu a[href*="page=ttb_demo_page"]:hover *,
+				#adminmenu a[href*="page=ttb_demo_page"]:focus,
+				#adminmenu a[href*="page=ttb_demo_page"]:focus *,
+				#adminmenu li.current a[href*="page=ttb_demo_page"],
+				#adminmenu li.current a[href*="page=ttb_demo_page"] * {
+					color: #f18500 !important;
+				}
+			</style>
+		<?php }
 
 		function addSubmenu() {
 				add_submenu_page(

@@ -24,7 +24,7 @@ if ( ! function_exists( 'ttb_fs' ) ) {
 			// Include the Freemius Lite SDK.
 			require_once TTB_DIR_PATH . 'freemius-lite/start.php';
 
-			$ttb_fs = fs_lite_dynamic_init( array(
+			$ttb_fs = fs_dynamic_init( array(
 				'id'                  => '20170',
 				'slug'                => 'text-typing',
 				// Resolve the SDK against the plugin root, not this includes/ file.
@@ -50,6 +50,11 @@ if ( ! function_exists( 'ttb_fs' ) ) {
 
 	// Init Freemius Lite.
 	ttb_fs();
+	// Show this plugin's own icon on the Freemius opt-in screen. Without it the SDK
+	// looks inside its own folder and falls back to a grey plug.
+	ttb_fs()->add_filter( 'plugin_icon', function () {
+		return wp_normalize_path( TTB_DIR_PATH . 'public/icon.svg' );
+	} );
 	// Signal that the SDK was initiated.
 	do_action( 'ttb_fs_loaded' );
 }
