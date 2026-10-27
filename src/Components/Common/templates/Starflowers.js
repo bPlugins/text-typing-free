@@ -178,19 +178,15 @@ const Starflower = ({ attributes }) => {
     <div className={`${prefix} ${theme}`}>
       <div className="starFlower-inline">
         {prefixText && (
-          <span
-            className="prefixText"
-            dangerouslySetInnerHTML={{ __html: prefixText + " " }}
-          />
+          <span className="prefixText">{prefixText} </span>
         )}
         <span ref={offscreenTextRef} className="offscreen-text" />
         <span ref={textRef} className="textAnimate" />
         {suffixText && (
-          <span
-            className="suffixText"
-            style={{ marginTop: '5px' }}
-            dangerouslySetInnerHTML={{ __html: " " + suffixText }}
-          />
+          <span className="suffixText" style={{ marginTop: '5px' }}>
+            {" "}
+            {suffixText}
+          </span>
         )}
       </div>
     </div>

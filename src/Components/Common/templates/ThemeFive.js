@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import { prefix } from "../../../utils/data";
+import { sanitizeTypedHtml } from "../../../utils/sanitizeTypedHtml";
 import "./themeStyles/themeFive.css";
 
 const ThemeFive = ({ attributes }) => {
@@ -33,7 +34,7 @@ const ThemeFive = ({ attributes }) => {
     if (!typingContents || typingContents.length === 0) return;
 
     const options = {
-      strings: typingContents.map((data) => data.text),
+      strings: typingContents.map((data) => sanitizeTypedHtml(data.text)),
       typeSpeed,
       startDelay,
       backSpeed,
@@ -44,7 +45,7 @@ const ThemeFive = ({ attributes }) => {
       loop: isLoop,
       loopCount: loopCount === 0 ? Infinity : loopCount,
       showCursor: isCursor,
-      cursorChar,
+      cursorChar: sanitizeTypedHtml(cursorChar),
       autoInsertCss: false,
       contentType: "html",
       preStringTyped: (pos, self) => {
@@ -88,19 +89,13 @@ const ThemeFive = ({ attributes }) => {
           </div>
         )}
         {prefixText && (
-          <div
-            className="cyberWave-prefix"
-            dangerouslySetInnerHTML={{ __html: prefixText }}
-          />
+          <div className="cyberWave-prefix">{prefixText}</div>
         )}
         <div className="cyberWave-typing">
           <span ref={typingEl}></span>
         </div>
         {suffixText && (
-          <div
-            className="cyberWave-suffix"
-            dangerouslySetInnerHTML={{ __html: suffixText }}
-          />
+          <div className="cyberWave-suffix">{suffixText}</div>
         )}
       </div>
     </div>

@@ -2,7 +2,7 @@
 Contributors: abuhayat, bplugins, himur98, freemius
 Tags: block, typing text, typing effect, text animation, animated headline
 Tested up to: 7.1
-Stable tag: 2.2.0
+Stable tag: 2.2.2
 Requires PHP: 7.4
 Requires at least: 6.5
 Donate link: https://www.buymeacoffee.com/abuhayat
@@ -254,6 +254,12 @@ As the external service functionality is handled by bpl-tools as a third-party l
 * **Privacy Policy:** [https://wordpress.org/about/privacy/](https://wordpress.org/about/privacy/)
 
 == Changelog ==
+
+= 2.2.2 - 26 October 2026 =
+- **Security**: Fixed stored XSS through block settings (prefix and suffix text, terminal header text, cursor character and typing contents) and hardened how block settings are passed to the page.
+
+= 2.2.1 - 25 October 2026 =
+- **Fix**: Fixed the typing contents sanitization issue.
 
 = 2.2.0 - 13 October 2026 =
 - **Update**: Freemius SDK updated to 2.13.5.

@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import { prefix } from "../../../utils/data";
+import { sanitizeTypedHtml } from "../../../utils/sanitizeTypedHtml";
 import "./themeStyles/themeFour.css";
 
 const ThemeFour = ({ attributes }) => {
@@ -33,7 +34,7 @@ const ThemeFour = ({ attributes }) => {
     if (!typingContents || typingContents.length === 0) return;
 
     const options = {
-      strings: typingContents.map((data) => data.text),
+      strings: typingContents.map((data) => sanitizeTypedHtml(data.text)),
       typeSpeed,
       startDelay,
       backSpeed,
@@ -44,7 +45,7 @@ const ThemeFour = ({ attributes }) => {
       loop: isLoop,
       loopCount: loopCount === 0 ? Infinity : loopCount,
       showCursor: isCursor,
-      cursorChar,
+      cursorChar: sanitizeTypedHtml(cursorChar),
       autoInsertCss: false,
       contentType: "html",
       ...(isRandomColor == false && {
@@ -92,10 +93,7 @@ const ThemeFour = ({ attributes }) => {
           </>
         }
         {prefixText && (
-          <div
-            className="auroraGlow-prefix"
-            dangerouslySetInnerHTML={{ __html: prefixText }}
-          />
+          <div className="auroraGlow-prefix">{prefixText}</div>
         )}
         <div className="auroraGlow-typing" style={
           isRandomColor ? {
@@ -109,10 +107,7 @@ const ThemeFour = ({ attributes }) => {
           <span ref={typingEl}></span>
         </div>
         {suffixText && (
-          <div
-            className="auroraGlow-suffix"
-            dangerouslySetInnerHTML={{ __html: suffixText }}
-          />
+          <div className="auroraGlow-suffix">{suffixText}</div>
         )}
       </div>
     </div>

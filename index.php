@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Text Typing - Block
  * Description: Make your text in amazing typing effect.
- * Version: 2.2.0
+ * Version: 2.2.2
  * Requires PHP: 7.4
  * Requires at least: 6.5
  * Author: bPlugins
@@ -24,7 +24,7 @@ if(function_exists('ttb_fs')){
 	ttb_fs()->set_basename(true, __FILE__);
 }else{
 // Constant
-define( 'TTB_PLUGIN_VERSION', isset( $_SERVER['HTTP_HOST'] ) && 'localhost' === $_SERVER['HTTP_HOST'] ? time() : '2.2.0' );
+define( 'TTB_PLUGIN_VERSION', isset( $_SERVER['HTTP_HOST'] ) && 'localhost' === $_SERVER['HTTP_HOST'] ? time() : '2.2.2' );
 define( 'TTB_DIR_URL', plugin_dir_url( __FILE__ ) );
 define( 'TTB_DIR_PATH', plugin_dir_path( __FILE__ ) );
 
@@ -33,6 +33,24 @@ require_once TTB_DIR_PATH . 'includes/fs-lite.php';
 
 // Ready-made sections for the inserter.
 require_once TTB_DIR_PATH . 'includes/patterns.php';
+
+if ( ! function_exists( 'ttb_json_attr' ) ) {
+	/**
+	 * JSON for a block's data-attributes HTML attribute.
+	 *
+	 * esc_attr() deliberately does not double-encode existing entities, so a
+	 * stored value such as "&lt;img src=x onerror=...&gt;" would reach the page
+	 * unchanged and the browser would decode it back into a live tag before
+	 * JSON.parse() - then into innerHTML. Encoding with double_encode=true keeps
+	 * every value byte-for-byte identical after the attribute round-trip.
+	 *
+	 * @param mixed $data Block attributes.
+	 * @return string Attribute-safe JSON.
+	 */
+	function ttb_json_attr( $data ) {
+		return htmlspecialchars( (string) wp_json_encode( $data ), ENT_QUOTES, 'UTF-8', true );
+	}
+}
 
 if( !class_exists( 'TTBPlugin' ) ) {
 	class TTBPlugin {

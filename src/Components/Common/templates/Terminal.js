@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { prefix } from '../../../utils/data';
+import { sanitizeTypedHtml } from '../../../utils/sanitizeTypedHtml';
 import './themeStyles/terminal.css';
 
 const Terminal = (props) => {
@@ -15,7 +16,7 @@ const Terminal = (props) => {
 
   useEffect(() => {
     const options = {
-      strings: typingContents.map(data => data.text),
+      strings: typingContents.map(data => sanitizeTypedHtml(data.text)),
       typeSpeed,
       startDelay,
       backSpeed,
@@ -26,7 +27,7 @@ const Terminal = (props) => {
       loop: isLoop,
       loopCount: 0 === loopCount ? Infinity : loopCount,
       showCursor: isCursor,
-      cursorChar,
+      cursorChar: sanitizeTypedHtml(cursorChar),
       autoInsertCss: false,
       contentType: 'html',
       preStringTyped: (pos, self) => {
@@ -52,14 +53,14 @@ const Terminal = (props) => {
         <span className="dot red"></span>
         <span className="dot yellow"></span>
         <span className="dot green"></span>
-        <span className='title' dangerouslySetInnerHTML={{ __html: headerText }} />
+        <span className='title'>{headerText}</span>
       </div>
       <div className="terminal-body">
-        <span className='prefixText' dangerouslySetInnerHTML={{ __html: prefixText }} />
+        <span className='prefixText'>{prefixText}</span>
         <div className="typingContents">
           <span ref={typingContentsEl}></span>
         </div>
-        <span className='suffixText' dangerouslySetInnerHTML={{ __html: suffixText }} />
+        <span className='suffixText'>{suffixText}</span>
       </div>
     </div>
   );

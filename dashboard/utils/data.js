@@ -197,6 +197,20 @@ export const welcomeInfo = (adminUrl = "") => ({
   // Release notes — Changelog renders a colored badge from `type`.
   changelogs: [
     {
+      version: "2.2.2 - 26 October 2026",
+      type: "fix",
+      list: [
+        "<strong>Security:</strong> Fixed stored XSS through block settings (prefix and suffix text, terminal header text, cursor character and typing contents) and hardened how block settings are passed to the page."
+      ],
+    },
+    {
+      version: "2.2.1 - 25 October 2026",
+      type: "fix",
+      list: [
+        "<strong>Fix:</strong> Fixed the typing contents sanitization issue."
+      ],
+    },
+    {
       version: "2.2.0 - 13 Oct 26",
       type: "new",
       list: [

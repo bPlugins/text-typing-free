@@ -11,6 +11,7 @@ import {
 } from "../../../../bpl-tools/utils/getCSS";
 
 import { prefix } from "../../utils/data";
+import { sanitizeStyleTag } from '../../utils/sanitizeStyleTag';
 
 const Style = ({ attributes, id }) => {
   const {
@@ -112,7 +113,7 @@ const Style = ({ attributes, id }) => {
   return (
     <style
       dangerouslySetInnerHTML={{
-        __html: `
+        __html: sanitizeStyleTag(`
 		${getTypoCSS("", prefixTypo)?.googleFontLink}
 		${getTypoCSS("", typingContentsTypo)?.googleFontLink}
 		${getTypoCSS("", suffixTypo)?.googleFontLink}
@@ -292,7 +293,7 @@ const Style = ({ attributes, id }) => {
 				${isValidCSS("width", iconSize?.width["mobile"])}
 			}
 		}
-		`.replace(/\s+/g, " "),
+		`).replace(/\s+/g, " "),
       }}
     />
   );

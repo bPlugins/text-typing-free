@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import { prefix } from "../../../utils/data";
+import { sanitizeTypedHtml } from "../../../utils/sanitizeTypedHtml";
 import "./themeStyles/themeThree.css";
 
 const ThemeThree = ({ attributes }) => {
@@ -33,7 +34,7 @@ const ThemeThree = ({ attributes }) => {
     if (!typingContents || typingContents.length === 0) return;
 
     const options = {
-      strings: typingContents.map((data) => data.text),
+      strings: typingContents.map((data) => sanitizeTypedHtml(data.text)),
       typeSpeed,
       startDelay,
       backSpeed,
@@ -44,7 +45,7 @@ const ThemeThree = ({ attributes }) => {
       loop: isLoop,
       loopCount: loopCount === 0 ? Infinity : loopCount,
       showCursor: isCursor,
-      cursorChar,
+      cursorChar: sanitizeTypedHtml(cursorChar),
       autoInsertCss: false,
       contentType: "html",
       preStringTyped: (pos, self) => {
@@ -90,19 +91,13 @@ const ThemeThree = ({ attributes }) => {
         </>
       }
       {prefixText && (
-        <div
-          className="neonGrid-prefix"
-          dangerouslySetInnerHTML={{ __html: prefixText }}
-        />
+        <div className="neonGrid-prefix">{prefixText}</div>
       )}
       <div className="neonGrid-typing">
         <span ref={typingEl}></span>
       </div>
       {suffixText && (
-        <div
-          className="neonGrid-suffix"
-          dangerouslySetInnerHTML={{ __html: suffixText }}
-        />
+        <div className="neonGrid-suffix">{suffixText}</div>
       )}
     </div>
   );

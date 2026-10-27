@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { prefix } from '../../../utils/data';
+import { sanitizeTypedHtml } from '../../../utils/sanitizeTypedHtml';
 
 const Default = (props) => {
   const { attributes } = props;
@@ -12,7 +13,7 @@ const Default = (props) => {
 
   useEffect(() => {
     const options = {
-      strings: typingContents.map(data => data.text), // array of strings
+      strings: typingContents.map(data => sanitizeTypedHtml(data.text)), // array of strings
       stringsElement: null, // stringsElement ID of element containing string children
       typeSpeed,
       startDelay,
@@ -26,7 +27,7 @@ const Default = (props) => {
       loop: isLoop,
       loopCount: 0 === loopCount ? Infinity : loopCount,
       showCursor: isCursor,
-      cursorChar,
+      cursorChar: sanitizeTypedHtml(cursorChar),
       autoInsertCss: false, // autoInsertCss insert CSS for cursor and fadeOut into HTML <head>
       attr: null, // attr attribute for typing. Ex: input placeholder, value, or just HTML text
       bindInputFocusEvents: false, // bindInputFocusEvents bind to focus and blur if el is text input
@@ -48,9 +49,9 @@ const Default = (props) => {
   }, [typingContentsEl.current, typingContents, typeSpeed, startDelay, backSpeed, backDelay, isShuffle, isFadeOut, fadeOutDelay, isLoop, loopCount, isCursor, cursorChar]);
 
   return <div className={`${prefix} ${theme}`}>
-    <span className='prefixText' dangerouslySetInnerHTML={{ __html: prefixText + '&nbsp;' }} />
+    <span className='prefixText'>{prefixText}{' '}</span>
     <span className='typingContents' ref={typingContentsEl}></span>
-    <span className='suffixText' dangerouslySetInnerHTML={{ __html: suffixText }} />
+    <span className='suffixText'>{suffixText}</span>
   </div>
 }
 export default Default;
