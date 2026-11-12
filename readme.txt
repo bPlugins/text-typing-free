@@ -2,7 +2,7 @@
 Contributors: abuhayat, bplugins, himur98, freemius
 Tags: block, typing text, typing effect, text animation, animated headline
 Tested up to: 7.1
-Stable tag: 2.2.3
+Stable tag: 2.2.4
 Requires PHP: 7.4
 Requires at least: 6.5
 Donate link: https://www.buymeacoffee.com/abuhayat
@@ -254,6 +254,9 @@ As the external service functionality is handled by bpl-tools as a third-party l
 * **Privacy Policy:** [https://wordpress.org/about/privacy/](https://wordpress.org/about/privacy/)
 
 == Changelog ==
+
+= 2.2.4 - 12 November 2026 =
+- **Fix**: Star Flower theme: line breaks and simple formatting (such as `<br>` and `<b>`) in the typing text now work, like in the other themes.
 
 = 2.2.3 - 12 November 2026 =
 - **Fix**: HTML such as line breaks and bold in the prefix and suffix text works again, and no extra space is added in front of the typing text when the prefix is empty.

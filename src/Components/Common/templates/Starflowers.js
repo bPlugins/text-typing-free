@@ -16,6 +16,38 @@ const colors = [
 
 const shapes = ["■", "▲", "▼", "◆", "◢", "◣", "◤", "◥", "★"];
 
+// Star Flower animates one letter at a time, so a typing line is split into
+// letters (each remembering its <b>/<i>/... wrappers) and line breaks. The line
+// goes through the same allowlist as the other themes first, so <br> and simple
+// formatting work while anything else stays plain text.
+const toLetterTokens = (text) => {
+  const tokens = [];
+  const walk = (node, wrappers) => {
+    node.childNodes.forEach((child) => {
+      if (child.nodeType === Node.TEXT_NODE) {
+        child.textContent.split("").forEach((char) => tokens.push({ char, wrappers }));
+      } else if (child.nodeType === Node.ELEMENT_NODE) {
+        if ("BR" === child.tagName) {
+          tokens.push({ br: true });
+        } else {
+          walk(child, [...wrappers, child.tagName]);
+        }
+      }
+    });
+  };
+  const doc = new DOMParser().parseFromString(sanitizeTypedHtml(text), "text/html");
+  walk(doc.body, []);
+  return tokens;
+};
+
+// Re-create the <b>, <i>, ... wrappers around one letter (no attributes kept).
+const wrapLetter = (letter, wrappers) =>
+  wrappers.reduceRight((inner, tag) => {
+    const wrapper = letter.ownerDocument.createElement(tag);
+    wrapper.appendChild(inner);
+    return wrapper;
+  }, letter);
+
 const Starflower = ({ attributes }) => {
   const { typingContents, textAlignment, themes = {}, color, prefixText, suffixText, backDelay, startDelay, loopCount, isLoop, isRandomColor = true, typeSpeed } = attributes;
   const { theme } = themes;
@@ -64,30 +96,43 @@ const Starflower = ({ attributes }) => {
     textRef.current.innerHTML = "";
     offscreenTextRef.current.innerHTML = "";
 
-    text.split("").forEach((char, i) => {
+    const tokens = toLetterTokens(text);
+    if (!tokens.length) {
+      setIsAnimating(false);
+      return;
+    }
+    let letterIndex = 0;
+
+    tokens.forEach((token, i) => {
       setTimeout(() => {
-        const formattedChar = char === " " ? "\u00A0" : char;
-        const letter = document.createElement("span");
-        const oLetter = document.createElement("span");
-        letter.textContent = formattedChar;
-        oLetter.textContent = formattedChar;
+        if (token.br) {
+          textRef.current?.appendChild(document.createElement("br"));
+          offscreenTextRef.current?.appendChild(document.createElement("br"));
+        } else {
+          const formattedChar = token.char === " " ? "\u00A0" : token.char;
+          const letter = document.createElement("span");
+          const oLetter = document.createElement("span");
+          letter.textContent = formattedChar;
+          oLetter.textContent = formattedChar;
 
-        const colorValue = isRandomColor ? colors[i % colors.length] : color;
-        letter.style.color = colorValue.main;
+          const colorValue = isRandomColor ? colors[letterIndex % colors.length] : color;
+          letterIndex++;
+          letter.style.color = colorValue.main;
 
-        if (textRef.current) {
-          textRef.current.appendChild(letter);
+          if (textRef.current) {
+            textRef.current.appendChild(wrapLetter(letter, token.wrappers));
+          }
+
+          if (offscreenTextRef.current) {
+            offscreenTextRef.current.appendChild(wrapLetter(oLetter, token.wrappers));
+          }
+
+          lettersRef.current.push({ onScreen: letter, offScreen: oLetter, char: formattedChar });
+
+          animateLetterIn(letter);
         }
 
-        if (offscreenTextRef.current) {
-          offscreenTextRef.current.appendChild(oLetter);
-        }
-
-        lettersRef.current.push({ onScreen: letter, offScreen: oLetter, char: formattedChar });
-
-        animateLetterIn(letter);
-
-        if (i === text.length - 1) {
+        if (i === tokens.length - 1) {
           setTimeout(() => {
             setIsAnimating(false);
 

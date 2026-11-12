@@ -197,6 +197,13 @@ export const welcomeInfo = (adminUrl = "") => ({
   // Release notes — Changelog renders a colored badge from `type`.
   changelogs: [
     {
+      version: "2.2.4 - 12 November 2026",
+      type: "fix",
+      list: [
+        "<strong>Fix:</strong> Star Flower theme: line breaks and simple formatting (such as &lt;br&gt; and &lt;b&gt;) in the typing text now work, like in the other themes."
+      ],
+    },
+    {
       version: "2.2.3 - 12 November 2026",
       type: "fix",
       list: [

@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Text Typing - Block
  * Description: Make your text in amazing typing effect.
- * Version: 2.2.3
+ * Version: 2.2.4
  * Requires PHP: 7.4
  * Requires at least: 6.5
  * Author: bPlugins
@@ -24,7 +24,7 @@ if(function_exists('ttb_fs')){
 	ttb_fs()->set_basename(true, __FILE__);
 }else{
 // Constant
-define( 'TTB_PLUGIN_VERSION', isset( $_SERVER['HTTP_HOST'] ) && 'localhost' === $_SERVER['HTTP_HOST'] ? time() : '2.2.3' );
+define( 'TTB_PLUGIN_VERSION', isset( $_SERVER['HTTP_HOST'] ) && 'localhost' === $_SERVER['HTTP_HOST'] ? time() : '2.2.4' );
 define( 'TTB_DIR_URL', plugin_dir_url( __FILE__ ) );
 define( 'TTB_DIR_PATH', plugin_dir_path( __FILE__ ) );
 
