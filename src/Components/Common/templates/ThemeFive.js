@@ -89,13 +89,13 @@ const ThemeFive = ({ attributes }) => {
           </div>
         )}
         {prefixText && (
-          <div className="cyberWave-prefix">{prefixText}</div>
+          <div className="cyberWave-prefix" dangerouslySetInnerHTML={{ __html: sanitizeTypedHtml(prefixText) }} />
         )}
         <div className="cyberWave-typing">
           <span ref={typingEl}></span>
         </div>
         {suffixText && (
-          <div className="cyberWave-suffix">{suffixText}</div>
+          <div className="cyberWave-suffix" dangerouslySetInnerHTML={{ __html: sanitizeTypedHtml(suffixText) }} />
         )}
       </div>
     </div>

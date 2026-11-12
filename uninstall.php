@@ -37,6 +37,7 @@ if ( ! empty( $ttb_post_ids ) ) {
 $ttb_options_to_delete = array(
 	'ttb_delete_data_on_uninstall',
 	'ttbUtils',
+	'ttb_review_state',
 );
 
 foreach ( $ttb_options_to_delete as $ttb_option ) {

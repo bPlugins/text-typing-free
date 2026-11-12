@@ -49,9 +49,9 @@ const Default = (props) => {
   }, [typingContentsEl.current, typingContents, typeSpeed, startDelay, backSpeed, backDelay, isShuffle, isFadeOut, fadeOutDelay, isLoop, loopCount, isCursor, cursorChar]);
 
   return <div className={`${prefix} ${theme}`}>
-    <span className='prefixText'>{prefixText}{' '}</span>
+    <span className="prefixText" dangerouslySetInnerHTML={{ __html: prefixText ? sanitizeTypedHtml(prefixText) + '&nbsp;' : '' }} />
     <span className='typingContents' ref={typingContentsEl}></span>
-    <span className='suffixText'>{suffixText}</span>
+    <span className="suffixText" dangerouslySetInnerHTML={{ __html: sanitizeTypedHtml(suffixText) }} />
   </div>
 }
 export default Default;

@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Text Typing - Block
  * Description: Make your text in amazing typing effect.
- * Version: 2.2.2
+ * Version: 2.2.3
  * Requires PHP: 7.4
  * Requires at least: 6.5
  * Author: bPlugins
@@ -24,7 +24,7 @@ if(function_exists('ttb_fs')){
 	ttb_fs()->set_basename(true, __FILE__);
 }else{
 // Constant
-define( 'TTB_PLUGIN_VERSION', isset( $_SERVER['HTTP_HOST'] ) && 'localhost' === $_SERVER['HTTP_HOST'] ? time() : '2.2.2' );
+define( 'TTB_PLUGIN_VERSION', isset( $_SERVER['HTTP_HOST'] ) && 'localhost' === $_SERVER['HTTP_HOST'] ? time() : '2.2.3' );
 define( 'TTB_DIR_URL', plugin_dir_url( __FILE__ ) );
 define( 'TTB_DIR_PATH', plugin_dir_path( __FILE__ ) );
 
@@ -33,6 +33,9 @@ require_once TTB_DIR_PATH . 'includes/fs-lite.php';
 
 // Ready-made sections for the inserter.
 require_once TTB_DIR_PATH . 'includes/patterns.php';
+
+// One polite, dismissible review request (admins only, after a week).
+require_once TTB_DIR_PATH . 'includes/review-notice.php';
 
 if ( ! function_exists( 'ttb_json_attr' ) ) {
 	/**
@@ -281,14 +284,14 @@ if( !class_exists( 'TTBPlugin' ) ) {
 		 */
 		function highlightHelpDemoMenu() { ?>
 			<style>
-				#adminmenu a[href*="page=ttb_demo_page"],
-				#adminmenu a[href*="page=ttb_demo_page"] *,
-				#adminmenu a[href*="page=ttb_demo_page"]:hover,
-				#adminmenu a[href*="page=ttb_demo_page"]:hover *,
-				#adminmenu a[href*="page=ttb_demo_page"]:focus,
-				#adminmenu a[href*="page=ttb_demo_page"]:focus *,
-				#adminmenu li.current a[href*="page=ttb_demo_page"],
-				#adminmenu li.current a[href*="page=ttb_demo_page"] * {
+				#adminmenu a[href$="page=ttb_demo_page"],
+				#adminmenu a[href$="page=ttb_demo_page"] *,
+				#adminmenu a[href$="page=ttb_demo_page"]:hover,
+				#adminmenu a[href$="page=ttb_demo_page"]:hover *,
+				#adminmenu a[href$="page=ttb_demo_page"]:focus,
+				#adminmenu a[href$="page=ttb_demo_page"]:focus *,
+				#adminmenu li.current a[href$="page=ttb_demo_page"],
+				#adminmenu li.current a[href$="page=ttb_demo_page"] * {
 					color: #f18500 !important;
 				}
 			</style>

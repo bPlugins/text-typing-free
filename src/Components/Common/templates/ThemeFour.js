@@ -93,7 +93,7 @@ const ThemeFour = ({ attributes }) => {
           </>
         }
         {prefixText && (
-          <div className="auroraGlow-prefix">{prefixText}</div>
+          <div className="auroraGlow-prefix" dangerouslySetInnerHTML={{ __html: sanitizeTypedHtml(prefixText) }} />
         )}
         <div className="auroraGlow-typing" style={
           isRandomColor ? {
@@ -107,7 +107,7 @@ const ThemeFour = ({ attributes }) => {
           <span ref={typingEl}></span>
         </div>
         {suffixText && (
-          <div className="auroraGlow-suffix">{suffixText}</div>
+          <div className="auroraGlow-suffix" dangerouslySetInnerHTML={{ __html: sanitizeTypedHtml(suffixText) }} />
         )}
       </div>
     </div>

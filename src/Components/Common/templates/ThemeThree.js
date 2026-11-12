@@ -91,13 +91,13 @@ const ThemeThree = ({ attributes }) => {
         </>
       }
       {prefixText && (
-        <div className="neonGrid-prefix">{prefixText}</div>
+        <div className="neonGrid-prefix" dangerouslySetInnerHTML={{ __html: sanitizeTypedHtml(prefixText) }} />
       )}
       <div className="neonGrid-typing">
         <span ref={typingEl}></span>
       </div>
       {suffixText && (
-        <div className="neonGrid-suffix">{suffixText}</div>
+        <div className="neonGrid-suffix" dangerouslySetInnerHTML={{ __html: sanitizeTypedHtml(suffixText) }} />
       )}
     </div>
   );

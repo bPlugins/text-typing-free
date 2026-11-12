@@ -56,11 +56,11 @@ const Terminal = (props) => {
         <span className='title'>{headerText}</span>
       </div>
       <div className="terminal-body">
-        <span className='prefixText'>{prefixText}</span>
+        <span className='prefixText' dangerouslySetInnerHTML={{ __html: sanitizeTypedHtml(prefixText) }} />
         <div className="typingContents">
           <span ref={typingContentsEl}></span>
         </div>
-        <span className='suffixText'>{suffixText}</span>
+        <span className='suffixText' dangerouslySetInnerHTML={{ __html: sanitizeTypedHtml(suffixText) }} />
       </div>
     </div>
   );
