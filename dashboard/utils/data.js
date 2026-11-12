@@ -197,18 +197,12 @@ export const welcomeInfo = (adminUrl = "") => ({
   // Release notes — Changelog renders a colored badge from `type`.
   changelogs: [
     {
-      version: "2.2.4 - 12 November 2026",
-      type: "fix",
-      list: [
-        "<strong>Fix:</strong> Star Flower theme: line breaks and simple formatting (such as &lt;br&gt; and &lt;b&gt;) in the typing text now work, like in the other themes."
-      ],
-    },
-    {
       version: "2.2.3 - 12 November 2026",
       type: "fix",
       list: [
         "<strong>Fix:</strong> HTML such as line breaks and bold in the prefix and suffix text works again, and no extra space is added in front of the typing text when the prefix is empty.",
-        "<strong>New:</strong> A small, dismissible &quot;Enjoying Text Typing?&quot; review request for admins after a week of use, with Leave a review, Maybe later and Don't show again buttons."
+        "<strong>New:</strong> A small, dismissible &quot;Enjoying Text Typing?&quot; review request for admins after a week of use, with Leave a review, Maybe later and Don't show again buttons.",
+        "<strong>Fix:</strong> Star Flower theme: line breaks and simple formatting (such as &lt;br&gt; and &lt;b&gt;) in the typing text now work, like in the other themes."
       ],
     },
     {
