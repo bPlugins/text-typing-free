@@ -2,7 +2,7 @@
 Contributors: abuhayat, bplugins, himur98, freemius
 Tags: block, typing text, typing effect, text animation, animated headline
 Tested up to: 7.1
-Stable tag: 2.2.3
+Stable tag: 2.2.4
 Requires PHP: 7.4
 Requires at least: 6.5
 Donate link: https://www.buymeacoffee.com/abuhayat
@@ -254,6 +254,10 @@ As the external service functionality is handled by bpl-tools as a third-party l
 * **Privacy Policy:** [https://wordpress.org/about/privacy/](https://wordpress.org/about/privacy/)
 
 == Changelog ==
+
+= 2.2.4 - 17 November 2026 =
+- **Tweak**: Admin notice styling enhancements and UI polish.
+- **Tweak**: Maintenance update and compatibility verification with the latest WordPress releases.
 
 = 2.2.3 - 12 November 2026 =
 - **Fix**: HTML such as line breaks and bold in the prefix and suffix text works again, and no extra space is added in front of the typing text when the prefix is empty.
