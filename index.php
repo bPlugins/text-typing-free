@@ -40,6 +40,10 @@ require_once TTB_DIR_PATH . 'includes/review-notice.php';
 // BFCM promotional banner and action link.
 require_once TTB_DIR_PATH . 'includes/bfcm-notice.php';
 
+// "Upgrade" submenu with the Freemius Plans and Pricing page.
+require_once TTB_DIR_PATH . 'includes/Pricing.php';
+new TTB\Pricing();
+
 if ( ! function_exists( 'ttb_json_attr' ) ) {
 	/**
 	 * JSON for a block's data-attributes HTML attribute.
@@ -118,7 +122,7 @@ if( !class_exists( 'TTBPlugin' ) ) {
 
 			// The Freemius opt-in screen hides this plugin's menu until it is answered, so the page below
 			// would say "not allowed". Let Freemius show its opt-in first; it opens the first page after.
-			if ( function_exists( 'ttb_fs' ) && ttb_fs()->is_activation_mode() ) {
+			if ( function_exists( 'ttb_fs' ) && ( method_exists( ttb_fs(), 'is_activation_mode' ) ? ttb_fs()->is_activation_mode() : ( ! get_option( 'text-typing-redirect', false ) || ( isset( $_GET['page'] ) && 'text-typing-free-opt-in' === sanitize_text_field( wp_unslash( $_GET['page'] ) ) ) ) ) ) {
 				return;
 			}
 
