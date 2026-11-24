@@ -21,7 +21,7 @@ if ( !defined( 'ABSPATH' ) ) {
 
 
 if(function_exists('ttb_fs')){
-	ttb_fs()->set_basename(true, __FILE__);
+	ttb_fs()->set_basename(false, __FILE__);
 }else{
 // Constant
 define( 'TTB_PLUGIN_VERSION', isset( $_SERVER['HTTP_HOST'] ) && 'localhost' === $_SERVER['HTTP_HOST'] ? time() : '2.2.4' );
